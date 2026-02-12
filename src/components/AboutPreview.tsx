@@ -1,0 +1,80 @@
+import { ArrowRight, Heart } from 'lucide-react';
+
+const AboutPreview = () => {
+  return (
+    <section id="about" className="section-padding bg-white">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Photo placeholder */}
+          <div className="relative">
+            <div className="bg-nancy-sage rounded-3xl aspect-[4/5] flex items-center justify-center relative overflow-hidden">
+              <div className="text-center p-8">
+                <div className="w-32 h-32 rounded-full bg-nancy-teal/20 mx-auto mb-6 flex items-center justify-center">
+                  <Heart className="h-16 w-16 text-nancy-teal" />
+                </div>
+                <p className="text-nancy-gray text-sm">Professional photo of Nancy</p>
+              </div>
+              {/* Decorative quote overlay */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-nancy-teal to-nancy-teal/90 p-6 md:p-8">
+                <p className="font-display text-white text-lg md:text-xl italic">
+                  "I couldn't save my mom's brain. But I could help other people protect theirs."
+                </p>
+                <p className="text-nancy-gold text-sm mt-2">— Nancy Ryan</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Content */}
+          <div>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-nancy-charcoal mb-6">
+              I Became a Brain Health Coach{' '}
+              <span className="gradient-text">Because I Had No Choice</span>
+            </h2>
+
+            <p className="text-nancy-gray leading-relaxed mb-4">
+              When my daughter was diagnosed with high-functioning autism at three years old, I
+              did what any mom would do — I started researching everything. I needed to understand
+              how her brain worked so I could help her thrive.
+            </p>
+
+            <p className="text-nancy-gray leading-relaxed mb-4">
+              That research changed my life. I discovered the connection between nutrition and
+              brain function. I started changing what our family ate, and I watched my daughter
+              flourish.
+            </p>
+
+            <p className="text-nancy-gray leading-relaxed mb-4">
+              Then I turned the lens on myself. I'd been living with anxiety and gut issues for
+              years. When I changed my nutrition, my anxiety lifted. My focus sharpened. I felt
+              like myself for the first time in years.
+            </p>
+
+            <p className="text-nancy-gray leading-relaxed mb-6">
+              Then my mother was diagnosed with Alzheimer's. Watching her memory fade turned this
+              work from a passion into a mission.
+            </p>
+
+            <div className="bg-nancy-sage rounded-xl p-5 mb-6">
+              <p className="text-sm text-nancy-charcoal">
+                <strong className="text-nancy-teal">Credentials:</strong> Master-Certified Health
+                Coach + Elite Brain Health Coach from{' '}
+                <strong>Amen University</strong> (January 2026) — based on Dr. Daniel Amen's
+                research using over 210,000 brain SPECT scans.
+              </p>
+            </div>
+
+            <a
+              href="#services"
+              className="inline-flex items-center text-nancy-teal font-semibold hover:text-nancy-teal-light transition-colors"
+            >
+              See How I Can Help You
+              <ArrowRight className="h-4 w-4 ml-2" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutPreview;

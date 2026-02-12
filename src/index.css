@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-body text-nancy-charcoal bg-nancy-cream;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-nancy-teal text-white px-6 py-3 rounded-xl font-semibold
+           hover:bg-nancy-teal-light transition-all duration-300
+           transform hover:scale-105 hover:shadow-lg;
+  }
+  .btn-secondary {
+    @apply border-2 border-nancy-teal text-nancy-teal px-6 py-3 rounded-xl font-semibold
+           hover:bg-nancy-teal hover:text-white transition-all duration-300;
+  }
+  .btn-gold {
+    @apply bg-nancy-gold text-white px-6 py-3 rounded-xl font-semibold
+           hover:bg-nancy-gold-light transition-all duration-300
+           transform hover:scale-105 hover:shadow-lg;
+  }
+  .section-padding {
+    @apply py-16 md:py-24 px-4 sm:px-6 lg:px-8;
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+}
+
+@layer utilities {
+  .gradient-teal-gold {
+    background: linear-gradient(135deg, #0D7377 0%, #D4A84B 100%);
+  }
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #0D7377, #11999E);
+  }
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+}
