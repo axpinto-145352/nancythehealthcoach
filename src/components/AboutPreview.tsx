@@ -64,10 +64,10 @@ const AboutPreview = () => {
             </div>
 
             <a
-              href="#services"
+              href="#quiz"
               className="inline-flex items-center text-nancy-teal font-semibold hover:text-nancy-teal-light transition-colors"
             >
-              See How I Can Help You
+              Find Out What Your Brain Needs
               <ArrowRight className="h-4 w-4 ml-2" />
             </a>
           </div>
