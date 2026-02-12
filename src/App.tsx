@@ -1,11 +1,12 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import SocialProofBar from './components/SocialProofBar';
-import ProblemSection from './components/ProblemSection';
-import Services from './components/Services';
-import HowItWorks from './components/HowItWorks';
-import Testimonials from './components/Testimonials';
 import AboutPreview from './components/AboutPreview';
+import ProblemSection from './components/ProblemSection';
+import HowItWorks from './components/HowItWorks';
+import QuizSection from './components/QuizSection';
+import Services from './components/Services';
+import Testimonials from './components/Testimonials';
 import LeadCapture from './components/LeadCapture';
 import BlogPreview from './components/BlogPreview';
 import FAQ from './components/FAQ';
@@ -19,11 +20,12 @@ function App() {
       <Navbar />
       <Hero />
       <SocialProofBar />
-      <ProblemSection />
-      <Services />
-      <HowItWorks />
-      <Testimonials />
       <AboutPreview />
+      <ProblemSection />
+      <HowItWorks />
+      <QuizSection />
+      <Services />
+      <Testimonials />
       <LeadCapture />
       <BlogPreview />
       <FAQ />
