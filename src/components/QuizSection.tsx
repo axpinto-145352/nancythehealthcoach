@@ -1,5 +1,3 @@
-import BrainHealthQuiz from './BrainHealthQuiz';
-
 const QuizSection = () => {
   return (
     <section id="quiz" className="section-padding bg-nancy-cream">
@@ -10,11 +8,19 @@ const QuizSection = () => {
             <span className="gradient-text">Trying to Tell You?</span>
           </h2>
           <p className="text-lg md:text-xl text-nancy-gray max-w-2xl mx-auto">
-            Take this 60-second assessment. No email required. Find out what your brain needs right now.
+            Take this quick assessment. No email required. Find out what your brain needs right now.
           </p>
         </div>
 
-        <BrainHealthQuiz />
+        <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-white">
+          <iframe
+            src="http://www.brainhealthassessment.com/"
+            title="Brain Health Assessment"
+            className="w-full border-0"
+            style={{ minHeight: '700px' }}
+            allowFullScreen
+          />
+        </div>
 
         <p className="text-center text-sm text-nancy-gray-light mt-8">
           Based on research from Amen University &amp; Dr. Daniel Amen's brain health protocols
