@@ -54,9 +54,9 @@ const AboutPreview = () => {
               work from a passion into a mission.
             </p>
 
-            <div className="bg-nancy-sage rounded-xl p-5 mb-6">
-              <div className="flex flex-col sm:flex-row items-center gap-4">
-                <img src={`${import.meta.env.BASE_URL}amen-badge.svg`} alt="Certified Elite Brain Health Coach - Amen University" className="h-20 w-20 sm:h-24 sm:w-24 flex-shrink-0" loading="lazy" />
+            <div className="bg-nancy-sage rounded-xl p-6 mb-6">
+              <div className="flex flex-col sm:flex-row items-center gap-5">
+                <img src={`${import.meta.env.BASE_URL}amen-badge.svg`} alt="Certified Elite Brain Health Coach - Amen University" className="h-32 w-32 sm:h-36 sm:w-36 flex-shrink-0" loading="lazy" />
                 <p className="text-sm text-nancy-charcoal">
                   <strong className="text-nancy-teal">Credentials:</strong> Master-Certified Health
                   Coach + Elite Brain Health Coach from{' '}
