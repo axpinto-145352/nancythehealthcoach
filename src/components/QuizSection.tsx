@@ -12,15 +12,14 @@ const QuizSection = () => {
           </p>
         </div>
 
-        <div className="flex justify-center">
-          <a
-            href="http://www.brainhealthassessment.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-nancy-green hover:bg-nancy-green-dark text-white font-semibold text-lg px-10 py-4 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5"
-          >
-            Take the Brain Health Assessment
-          </a>
+        <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-white">
+          <iframe
+            src="http://www.brainhealthassessment.com/"
+            title="Brain Health Assessment"
+            className="w-full border-0"
+            style={{ minHeight: '700px' }}
+            allowFullScreen
+          />
         </div>
 
         <p className="text-center text-sm text-nancy-gray-light mt-8">
