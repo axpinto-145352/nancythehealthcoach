@@ -57,7 +57,7 @@ const Footer = () => {
             </div>
 
             <div className="flex items-center space-x-3 bg-white/5 rounded-lg p-3">
-              <img src={`${import.meta.env.BASE_URL}amen-badge.svg`} alt="Certified Elite Brain Health Coach - Amen University" className="h-12 w-12 flex-shrink-0" loading="lazy" />
+              <img src={`${import.meta.env.BASE_URL}amen-badge.png`} alt="Certified Elite Brain Health Clinician - Amen University" className="h-12 w-12 flex-shrink-0" loading="lazy" />
               <div>
                 <p className="text-xs font-semibold text-white">Amen University</p>
                 <p className="text-[11px] text-gray-400">Certified Elite Brain Health Coach</p>

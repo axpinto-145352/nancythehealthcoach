@@ -56,7 +56,7 @@ const AboutPreview = () => {
 
             <div className="bg-nancy-sage rounded-xl p-6 mb-6">
               <div className="flex flex-col items-center gap-4 text-center">
-                <img src={`${import.meta.env.BASE_URL}amen-badge.svg`} alt="Certified Elite Brain Health Coach - Amen University" className="h-48 w-48 sm:h-56 sm:w-56 flex-shrink-0" loading="lazy" />
+                <img src={`${import.meta.env.BASE_URL}amen-badge.png`} alt="Certified Elite Brain Health Clinician - Amen University" className="h-48 w-48 sm:h-56 sm:w-56 flex-shrink-0" loading="lazy" />
                 <p className="text-sm text-nancy-charcoal">
                   <strong className="text-nancy-teal">Credentials:</strong> Master-Certified Health
                   Coach + Elite Brain Health Coach from{' '}
