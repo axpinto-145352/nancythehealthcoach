@@ -17,7 +17,7 @@ import {
 } from 'lucide-react';
 
 interface StarterKitProps {
-  onNavigate: (hash: string) => void;
+  onNavigate: (target: string) => void;
 }
 
 const StarterKit = ({ onNavigate }: StarterKitProps) => {
@@ -213,7 +213,7 @@ const StarterKit = ({ onNavigate }: StarterKitProps) => {
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <button
-            onClick={() => onNavigate('#')}
+            onClick={() => onNavigate('')}
             className="inline-flex items-center text-gray-400 hover:text-white transition-colors mb-6 text-sm"
           >
             <ArrowLeft className="h-4 w-4 mr-1" />
@@ -461,7 +461,7 @@ const StarterKit = ({ onNavigate }: StarterKitProps) => {
           </a>
           <div className="mt-6">
             <button
-              onClick={() => onNavigate('#')}
+              onClick={() => onNavigate('')}
               className="inline-flex items-center text-nancy-teal hover:text-nancy-teal-light font-medium transition-colors"
             >
               <ArrowLeft className="h-4 w-4 mr-2" />

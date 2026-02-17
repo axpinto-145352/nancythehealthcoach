@@ -1,13 +1,26 @@
 import { ArrowLeft, ArrowRight, Clock, Tag, User, Calendar } from 'lucide-react';
 import { getPostBySlug, getRelatedPosts } from '../data/blogPosts';
+import { useDocumentHead } from '../hooks/useDocumentHead';
+import { JsonLd } from './JsonLd';
 
 interface BlogPostProps {
   slug: string;
-  onNavigate: (hash: string) => void;
+  onNavigate: (target: string) => void;
 }
 
 const BlogPost = ({ slug, onNavigate }: BlogPostProps) => {
   const post = getPostBySlug(slug);
+  const BASE = import.meta.env.BASE_URL;
+
+  useDocumentHead(post ? {
+    title: `${post.title} | Nancy The Health Coach`,
+    description: post.metaDescription,
+    canonicalPath: `${BASE}blog/${post.slug}`,
+    ogType: 'article',
+  } : {
+    title: 'Article Not Found | Nancy The Health Coach',
+    description: 'The article you are looking for does not exist.',
+  });
 
   if (!post) {
     return (
@@ -15,7 +28,7 @@ const BlogPost = ({ slug, onNavigate }: BlogPostProps) => {
         <div className="text-center">
           <h1 className="font-display text-3xl font-bold text-nancy-charcoal mb-4">Article Not Found</h1>
           <p className="text-nancy-gray mb-6">The article you're looking for doesn't exist.</p>
-          <button onClick={() => onNavigate('#blog-page')} className="btn-primary">
+          <button onClick={() => onNavigate('blog')} className="btn-primary">
             View All Articles
           </button>
         </div>
@@ -93,11 +106,38 @@ const BlogPost = ({ slug, onNavigate }: BlogPostProps) => {
 
   return (
     <div className="min-h-screen bg-nancy-cream">
+      <JsonLd data={{
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: post.title,
+        description: post.metaDescription,
+        datePublished: post.publishDate,
+        dateModified: post.updatedDate,
+        author: {
+          '@type': 'Person',
+          name: post.author,
+          jobTitle: post.authorCredentials,
+          url: window.location.origin + BASE,
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Nancy The Health Coach',
+          url: window.location.origin + BASE,
+        },
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': window.location.origin + BASE + 'blog/' + post.slug,
+        },
+        keywords: post.keywords.join(', '),
+        wordCount: post.content.split(/\s+/).length,
+        articleSection: post.category,
+      }} />
+
       {/* Article Header */}
       <div className="bg-nancy-charcoal pt-28 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <button
-            onClick={() => onNavigate('#blog-page')}
+            onClick={() => onNavigate('blog')}
             className="inline-flex items-center text-gray-400 hover:text-white transition-colors mb-6 text-sm"
           >
             <ArrowLeft className="h-4 w-4 mr-1" />
@@ -194,10 +234,7 @@ const BlogPost = ({ slug, onNavigate }: BlogPostProps) => {
               {relatedPosts.map((related) => (
                 <article
                   key={related.slug}
-                  onClick={() => {
-                    onNavigate(`#blog/${related.slug}`);
-                    window.scrollTo(0, 0);
-                  }}
+                  onClick={() => onNavigate(`blog/${related.slug}`)}
                   className="bg-nancy-cream rounded-2xl overflow-hidden card-hover group cursor-pointer"
                 >
                   <div className={`${related.color} h-2`} />

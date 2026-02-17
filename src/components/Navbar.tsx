@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 interface NavbarProps {
-  onNavigate?: (hash: string) => void;
+  onNavigate?: (target: string) => void;
 }
 
 const Navbar = ({ onNavigate }: NavbarProps) => {
@@ -16,35 +16,36 @@ const Navbar = ({ onNavigate }: NavbarProps) => {
   }, []);
 
   const links = [
-    { label: 'Home', href: '#' },
+    { label: 'Home', href: '' },
     { label: 'About', href: '#about' },
     { label: 'Quiz', href: '#quiz' },
     { label: 'Services', href: '#services' },
     { label: 'Testimonials', href: '#testimonials' },
     { label: 'FAQ', href: '#faq' },
-    { label: 'Blog', href: '#blog-page' },
+    { label: 'Blog', href: 'blog' },
   ];
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    // For non-page routes (section anchors on homepage), check if we're on a subpage
-    const isSubPage = window.location.hash.startsWith('#blog/') ||
-      window.location.hash === '#blog-page' ||
-      window.location.hash === '#starter-kit';
+  const getFullHref = (href: string) => {
+    if (href.startsWith('#')) return href;
+    return `${import.meta.env.BASE_URL}${href}`;
+  };
 
-    if (href === '#blog-page' || href === '#starter-kit') {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (!href.startsWith('#')) {
+      // Path navigation (blog, home)
       e.preventDefault();
-      if (onNavigate) onNavigate(href);
-    } else if (isSubPage && href !== '#blog-page') {
-      // Navigate back to homepage section
-      e.preventDefault();
-      window.location.hash = href || '#';
-      // Force a page reload for section navigation from subpages
-      if (href.startsWith('#') && href !== '#') {
-        window.location.hash = '';
-        setTimeout(() => {
-          window.location.hash = href;
-        }, 50);
+      onNavigate?.(href);
+    } else {
+      // Section anchor — only intercept on subpages
+      const base = import.meta.env.BASE_URL;
+      const relative = window.location.pathname.startsWith(base)
+        ? window.location.pathname.slice(base.length).replace(/\/$/, '')
+        : '';
+      if (relative !== '') {
+        e.preventDefault();
+        onNavigate?.(href);
       }
+      // On homepage, let default anchor behavior handle scroll
     }
   };
 
@@ -55,8 +56,8 @@ const Navbar = ({ onNavigate }: NavbarProps) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a
-            href="#"
-            onClick={(e) => handleClick(e, '#')}
+            href={import.meta.env.BASE_URL}
+            onClick={(e) => { e.preventDefault(); onNavigate?.(''); }}
             className="flex items-center space-x-2"
           >
             <img src={`${import.meta.env.BASE_URL}logo-icon.svg`} alt="Nancy The Health Coach" className="h-10 w-10" />
@@ -71,7 +72,7 @@ const Navbar = ({ onNavigate }: NavbarProps) => {
             {links.map((link) => (
               <a
                 key={link.label}
-                href={link.href}
+                href={getFullHref(link.href)}
                 onClick={(e) => handleClick(e, link.href)}
                 className={`text-sm font-medium transition-colors hover:text-nancy-teal ${
                   scrolled ? 'text-nancy-charcoal' : 'text-nancy-charcoal'
@@ -105,7 +106,7 @@ const Navbar = ({ onNavigate }: NavbarProps) => {
             {links.map((link) => (
               <a
                 key={link.label}
-                href={link.href}
+                href={getFullHref(link.href)}
                 onClick={(e) => {
                   handleClick(e, link.href);
                   setIsOpen(false);

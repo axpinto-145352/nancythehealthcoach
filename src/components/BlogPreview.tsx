@@ -24,7 +24,7 @@ const BlogPreview = ({ onNavigate }: BlogPreviewProps) => {
           {featuredPosts.map((post) => (
             <article
               key={post.slug}
-              onClick={() => onNavigate?.(`#blog/${post.slug}`)}
+              onClick={() => onNavigate?.(`blog/${post.slug}`)}
               className="bg-nancy-cream rounded-2xl overflow-hidden card-hover group cursor-pointer"
             >
               {/* Color banner */}
@@ -62,7 +62,7 @@ const BlogPreview = ({ onNavigate }: BlogPreviewProps) => {
         {/* View All Articles Link */}
         <div className="text-center mt-10">
           <button
-            onClick={() => onNavigate?.('#blog-page')}
+            onClick={() => onNavigate?.('blog')}
             className="btn-secondary inline-flex items-center space-x-2"
           >
             <span>View All Articles</span>
