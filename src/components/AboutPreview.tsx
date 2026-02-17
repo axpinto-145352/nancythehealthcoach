@@ -9,8 +9,8 @@ const AboutPreview = () => {
           <div className="relative">
             <div className="bg-nancy-sage rounded-3xl aspect-[4/5] relative overflow-hidden">
               <img
-                src={`${import.meta.env.BASE_URL}nancy-headshot.png`}
-                alt="Nancy Ryan — Brain Health Coach"
+                src={`${import.meta.env.BASE_URL}nancy-mom.png`}
+                alt="Nancy Ryan with her mother"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
