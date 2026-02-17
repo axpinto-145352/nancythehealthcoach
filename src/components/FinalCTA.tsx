@@ -27,7 +27,7 @@ const FinalCTA = () => {
             href="https://calendly.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white text-nancy-teal px-5 sm:px-8 py-4 rounded-xl font-bold text-base sm:text-lg transition-all transform hover:scale-105 hover:shadow-xl inline-flex items-center justify-center space-x-2"
+            className="bg-white text-nancy-teal px-5 sm:px-8 py-4 rounded-xl font-bold text-base sm:text-lg transition-all hover:shadow-xl inline-flex items-center justify-center space-x-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-nancy-teal"
           >
             <Calendar className="h-5 w-5" />
             <span>Book My Free Consultation</span>

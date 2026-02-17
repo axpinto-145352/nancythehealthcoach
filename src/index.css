@@ -15,16 +15,17 @@
   .btn-primary {
     @apply bg-nancy-teal text-white px-6 py-3 min-h-[44px] rounded-xl font-semibold
            hover:bg-nancy-teal-light transition-all duration-300
-           transform hover:scale-105 hover:shadow-lg;
+           hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-nancy-teal focus-visible:ring-offset-2;
   }
   .btn-secondary {
     @apply border-2 border-nancy-teal text-nancy-teal px-6 py-3 min-h-[44px] rounded-xl font-semibold
-           hover:bg-nancy-teal hover:text-white transition-all duration-300;
+           hover:bg-nancy-teal hover:text-white transition-all duration-300
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-nancy-teal focus-visible:ring-offset-2;
   }
   .btn-gold {
     @apply bg-nancy-gold text-white px-6 py-3 min-h-[44px] rounded-xl font-semibold
            hover:bg-nancy-gold-light transition-all duration-300
-           transform hover:scale-105 hover:shadow-lg;
+           hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-nancy-gold focus-visible:ring-offset-2;
   }
   .safe-bottom {
     padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
@@ -43,6 +44,8 @@
   }
   .gradient-text {
     @apply bg-clip-text text-transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     background-image: linear-gradient(135deg, #0D7377, #11999E);
   }
   .text-shadow {

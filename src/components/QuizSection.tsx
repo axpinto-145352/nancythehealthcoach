@@ -16,7 +16,10 @@ const QuizSection = () => {
           <iframe
             src="https://www.brainhealthassessment.com/"
             title="Brain Health Assessment"
-            className="w-full border-0 min-h-[300px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[700px]"
+            className="w-full border-0 min-h-[300px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px]"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+            referrerPolicy="no-referrer"
+            loading="lazy"
             allowFullScreen
           />
         </div>
