@@ -18,7 +18,7 @@ const LeadCapture = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Mock PDF preview */}
           <div className="relative mx-auto lg:mx-0">
-            <div className="bg-white rounded-2xl shadow-xl p-8 w-72 transform rotate-[-3deg] hover:rotate-0 transition-transform duration-500">
+            <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-[288px] transform rotate-[-3deg] hover:rotate-0 transition-transform duration-500">
               <div className="border-2 border-nancy-teal/20 rounded-lg p-6 text-center">
                 <BookOpen className="h-12 w-12 text-nancy-teal mx-auto mb-4" />
                 <h4 className="font-display font-bold text-nancy-charcoal text-sm mb-2">

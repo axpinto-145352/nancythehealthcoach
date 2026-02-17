@@ -105,7 +105,7 @@ const Services = () => {
                 <p className="text-sm text-nancy-gray italic mb-4">{tier.tagline}</p>
 
                 <div className="mb-6">
-                  <span className="font-display text-4xl font-bold text-nancy-charcoal">
+                  <span className="font-display text-3xl sm:text-4xl font-bold text-nancy-charcoal">
                     {tier.price}
                   </span>
                   <span className="text-nancy-gray text-sm ml-2">/ {tier.period}</span>

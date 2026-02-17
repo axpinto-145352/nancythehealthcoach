@@ -16,13 +16,24 @@ const QuizSection = () => {
           <iframe
             src="http://www.brainhealthassessment.com/"
             title="Brain Health Assessment"
-            className="w-full border-0"
-            style={{ minHeight: '700px' }}
+            className="w-full border-0 min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px]"
             allowFullScreen
           />
         </div>
 
-        <p className="text-center text-sm text-nancy-gray-light mt-8">
+        <p className="text-center text-sm text-nancy-gray-light mt-4">
+          Assessment not loading?{' '}
+          <a
+            href="http://www.brainhealthassessment.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-nancy-teal hover:text-nancy-teal-light underline"
+          >
+            Open it here
+          </a>
+        </p>
+
+        <p className="text-center text-sm text-nancy-gray-light mt-2">
           Based on research from Amen University &amp; Dr. Daniel Amen's brain health protocols
         </p>
       </div>
