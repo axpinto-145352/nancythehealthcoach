@@ -60,7 +60,7 @@ const Navbar = () => {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-nancy-charcoal"
+            className="md:hidden p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-nancy-charcoal"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>

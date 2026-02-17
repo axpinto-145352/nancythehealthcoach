@@ -17,7 +17,7 @@ const Hero = () => {
               Brain Health Coach — San Diego & Virtual
             </div>
 
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-nancy-charcoal mb-6 leading-tight">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-nancy-charcoal mb-6 leading-tight">
               Hi, I'm Nancy.{' '}
               <span className="gradient-text">I Help People Heal Their Brains Through Nutrition.</span>
             </h1>

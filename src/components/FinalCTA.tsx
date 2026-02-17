@@ -9,7 +9,7 @@ const FinalCTA = () => {
       }} />
 
       <div className="max-w-3xl mx-auto text-center relative z-10">
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+        <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
           Ready to Give Your Brain What It Needs?
         </h2>
 
@@ -27,14 +27,14 @@ const FinalCTA = () => {
             href="https://calendly.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white text-nancy-teal px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 hover:shadow-xl inline-flex items-center justify-center space-x-2"
+            className="bg-white text-nancy-teal px-5 sm:px-8 py-4 rounded-xl font-bold text-base sm:text-lg transition-all transform hover:scale-105 hover:shadow-xl inline-flex items-center justify-center space-x-2"
           >
             <Calendar className="h-5 w-5" />
             <span>Book My Free Consultation</span>
           </a>
           <a
             href="#services"
-            className="border-2 border-white/50 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all hover:bg-white/10 inline-flex items-center justify-center space-x-2"
+            className="border-2 border-white/50 text-white px-5 sm:px-8 py-4 rounded-xl font-bold text-base sm:text-lg transition-all hover:bg-white/10 inline-flex items-center justify-center space-x-2"
           >
             <span>View Programs</span>
             <ArrowRight className="h-5 w-5" />

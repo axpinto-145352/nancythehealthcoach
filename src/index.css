@@ -13,18 +13,21 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-nancy-teal text-white px-6 py-3 rounded-xl font-semibold
+    @apply bg-nancy-teal text-white px-6 py-3 min-h-[44px] rounded-xl font-semibold
            hover:bg-nancy-teal-light transition-all duration-300
            transform hover:scale-105 hover:shadow-lg;
   }
   .btn-secondary {
-    @apply border-2 border-nancy-teal text-nancy-teal px-6 py-3 rounded-xl font-semibold
+    @apply border-2 border-nancy-teal text-nancy-teal px-6 py-3 min-h-[44px] rounded-xl font-semibold
            hover:bg-nancy-teal hover:text-white transition-all duration-300;
   }
   .btn-gold {
-    @apply bg-nancy-gold text-white px-6 py-3 rounded-xl font-semibold
+    @apply bg-nancy-gold text-white px-6 py-3 min-h-[44px] rounded-xl font-semibold
            hover:bg-nancy-gold-light transition-all duration-300
            transform hover:scale-105 hover:shadow-lg;
+  }
+  .safe-bottom {
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
   }
   .section-padding {
     @apply py-16 md:py-24 px-4 sm:px-6 lg:px-8;

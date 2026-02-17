@@ -16,7 +16,7 @@ import StickyCTA from './components/StickyCTA';
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pb-[72px] md:pb-0">
       <Navbar />
       <Hero />
       <SocialProofBar />
