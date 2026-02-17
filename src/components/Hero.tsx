@@ -53,7 +53,19 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right: Photo */}
+          {/* Mobile: Photo */}
+          <div className="relative lg:hidden mx-auto max-w-sm">
+            <div className="bg-nancy-sage rounded-3xl aspect-[3/4] relative overflow-hidden">
+              <img
+                src="/nancy-headshot.png"
+                alt="Nancy Ryan — Brain Health Coach"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-nancy-teal/10 to-transparent h-32" />
+            </div>
+          </div>
+
+          {/* Desktop: Photo */}
           <div className="relative hidden lg:block">
             <div className="bg-nancy-sage rounded-3xl aspect-[3/4] relative overflow-hidden">
               <img

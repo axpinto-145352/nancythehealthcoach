@@ -287,7 +287,7 @@ const BrainHealthQuiz = () => {
               {questions.map((_, i) => (
                 <div
                   key={i}
-                  className={`h-2 w-8 rounded-full transition-all duration-300 ${
+                  className={`h-2 w-5 sm:w-8 rounded-full transition-all duration-300 ${
                     i < currentQuestion ? 'bg-nancy-teal' :
                     i === currentQuestion ? 'bg-nancy-gold' : 'bg-gray-200'
                   }`}
