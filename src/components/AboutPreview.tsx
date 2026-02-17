@@ -1,19 +1,18 @@
-import { ArrowRight, Heart } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const AboutPreview = () => {
   return (
     <section id="about" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Photo placeholder */}
+          {/* Photo */}
           <div className="relative">
-            <div className="bg-nancy-sage rounded-3xl aspect-[4/5] flex items-center justify-center relative overflow-hidden">
-              <div className="text-center p-8">
-                <div className="w-32 h-32 rounded-full bg-nancy-teal/20 mx-auto mb-6 flex items-center justify-center">
-                  <Heart className="h-16 w-16 text-nancy-teal" />
-                </div>
-                <p className="text-nancy-gray text-sm">Professional photo of Nancy</p>
-              </div>
+            <div className="bg-nancy-sage rounded-3xl aspect-[4/5] relative overflow-hidden">
+              <img
+                src="/nancy-headshot.jpg"
+                alt="Nancy Ryan — Brain Health Coach"
+                className="w-full h-full object-cover"
+              />
               {/* Decorative quote overlay */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-nancy-teal to-nancy-teal/90 p-6 md:p-8">
                 <p className="font-display text-white text-lg md:text-xl italic">
