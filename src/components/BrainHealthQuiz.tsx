@@ -206,7 +206,7 @@ const BrainHealthQuiz = () => {
             </h3>
             <div className="flex items-center justify-center space-x-3 mt-4">
               <span className="text-sm opacity-80">Brain Health Score</span>
-              <div className="w-32 h-3 bg-white/20 rounded-full overflow-hidden">
+              <div className="w-20 sm:w-32 h-3 bg-white/20 rounded-full overflow-hidden">
                 <div
                   className="h-full bg-nancy-gold rounded-full transition-all duration-1000 ease-out"
                   style={{ width: `${100 - scorePercent}%` }}

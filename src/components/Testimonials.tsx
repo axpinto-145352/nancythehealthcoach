@@ -37,13 +37,13 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {testimonials.map((t, i) => (
             <div
               key={i}
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-nancy-gold/30 transition-all duration-300 hover:-translate-y-1"
             >
-              <Quote className="h-8 w-8 text-nancy-gold/40 mb-4" />
+              <Quote className="h-8 w-8 text-nancy-gold/60 mb-4" />
               <p className="text-xs text-nancy-gold mb-3 font-medium">{t.context}</p>
               <p className="text-gray-300 leading-relaxed mb-6 text-sm italic">
                 "{t.text}"

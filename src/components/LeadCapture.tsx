@@ -81,7 +81,7 @@ const LeadCapture = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   required
-                  className="flex-1 px-5 py-3.5 rounded-xl border-2 border-nancy-sage-dark focus:border-nancy-teal focus:ring-0 focus:outline-none bg-white text-nancy-charcoal placeholder:text-nancy-gray-light"
+                  className="flex-1 px-5 py-3.5 rounded-xl border-2 border-nancy-sage-dark focus:border-nancy-teal focus:ring-2 focus:ring-nancy-teal/20 focus:outline-none bg-white text-nancy-charcoal placeholder:text-nancy-gray-light"
                 />
                 <button type="submit" className="btn-primary flex items-center justify-center space-x-2 whitespace-nowrap">
                   <Download className="h-4 w-4" />

@@ -77,13 +77,13 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16">
           {tiers.map((tier, i) => (
             <div
               key={i}
               className={`relative bg-white rounded-3xl overflow-hidden card-hover ${
                 tier.popular
-                  ? 'ring-2 ring-nancy-teal shadow-xl lg:scale-105'
+                  ? 'ring-2 ring-nancy-teal shadow-xl'
                   : 'border border-gray-200'
               }`}
             >

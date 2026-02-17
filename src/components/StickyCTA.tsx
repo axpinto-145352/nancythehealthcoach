@@ -46,7 +46,7 @@ const StickyCTA = () => {
       </div>
 
       {/* Mobile: sticky bottom bar */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 p-3 safe-bottom">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 px-3 pt-3 safe-bottom">
         <a
           href="https://calendly.com"
           target="_blank"

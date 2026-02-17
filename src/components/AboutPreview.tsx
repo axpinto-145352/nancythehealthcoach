@@ -9,9 +9,10 @@ const AboutPreview = () => {
           <div className="relative">
             <div className="bg-nancy-sage rounded-3xl aspect-[4/5] relative overflow-hidden">
               <img
-                src="/nancy-headshot.png"
+                src={`${import.meta.env.BASE_URL}nancy-headshot.png`}
                 alt="Nancy Ryan — Brain Health Coach"
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
               {/* Decorative quote overlay */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-nancy-teal to-nancy-teal/90 p-6 md:p-8">
@@ -55,7 +56,7 @@ const AboutPreview = () => {
 
             <div className="bg-nancy-sage rounded-xl p-5 mb-6">
               <div className="flex flex-col sm:flex-row items-center gap-4">
-                <img src="/amen-badge.svg" alt="Certified Elite Brain Health Coach - Amen University" className="h-20 w-20 sm:h-24 sm:w-24 flex-shrink-0" />
+                <img src={`${import.meta.env.BASE_URL}amen-badge.svg`} alt="Certified Elite Brain Health Coach - Amen University" className="h-20 w-20 sm:h-24 sm:w-24 flex-shrink-0" loading="lazy" />
                 <p className="text-sm text-nancy-charcoal">
                   <strong className="text-nancy-teal">Credentials:</strong> Master-Certified Health
                   Coach + Elite Brain Health Coach from{' '}

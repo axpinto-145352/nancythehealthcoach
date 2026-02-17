@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="#" className="flex items-center space-x-2">
-            <img src="/logo-icon.svg" alt="Nancy The Health Coach" className="h-10 w-10" />
+            <img src={`${import.meta.env.BASE_URL}logo-icon.svg`} alt="Nancy The Health Coach" className="h-10 w-10" />
             <span className={`font-display font-bold text-lg md:text-xl ${
               scrolled ? 'text-nancy-charcoal' : 'text-nancy-charcoal'
             }`}>
@@ -60,7 +60,7 @@ const Navbar = () => {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-nancy-charcoal"
+            className="md:hidden p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-nancy-charcoal"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>

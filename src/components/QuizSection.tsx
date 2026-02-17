@@ -14,9 +14,12 @@ const QuizSection = () => {
 
         <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-white">
           <iframe
-            src="http://www.brainhealthassessment.com/"
+            src="https://www.brainhealthassessment.com/"
             title="Brain Health Assessment"
-            className="w-full border-0 min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px]"
+            className="w-full border-0 min-h-[300px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px]"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+            referrerPolicy="no-referrer"
+            loading="lazy"
             allowFullScreen
           />
         </div>
@@ -24,7 +27,7 @@ const QuizSection = () => {
         <p className="text-center text-sm text-nancy-gray-light mt-4">
           Assessment not loading?{' '}
           <a
-            href="http://www.brainhealthassessment.com/"
+            href="https://www.brainhealthassessment.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-nancy-teal hover:text-nancy-teal-light underline"

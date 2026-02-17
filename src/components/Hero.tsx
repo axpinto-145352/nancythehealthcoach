@@ -17,7 +17,7 @@ const Hero = () => {
               Brain Health Coach — San Diego & Virtual
             </div>
 
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-nancy-charcoal mb-6 leading-tight">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-nancy-charcoal mb-6 leading-tight">
               Hi, I'm Nancy.{' '}
               <span className="gradient-text">I Help People Heal Their Brains Through Nutrition.</span>
             </h1>
@@ -57,7 +57,7 @@ const Hero = () => {
           <div className="relative lg:hidden mx-auto max-w-sm">
             <div className="bg-nancy-sage rounded-3xl aspect-[3/4] relative overflow-hidden">
               <img
-                src="/nancy-headshot.png"
+                src={`${import.meta.env.BASE_URL}nancy-headshot.png`}
                 alt="Nancy Ryan — Brain Health Coach"
                 className="w-full h-full object-cover"
               />
@@ -69,7 +69,7 @@ const Hero = () => {
           <div className="relative hidden lg:block">
             <div className="bg-nancy-sage rounded-3xl aspect-[3/4] relative overflow-hidden">
               <img
-                src="/nancy-headshot.png"
+                src={`${import.meta.env.BASE_URL}nancy-headshot.png`}
                 alt="Nancy Ryan — Brain Health Coach"
                 className="w-full h-full object-cover"
               />
