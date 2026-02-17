@@ -9,7 +9,7 @@ const AboutPreview = () => {
           <div className="relative">
             <div className="bg-nancy-sage rounded-3xl aspect-[4/5] relative overflow-hidden">
               <img
-                src="/nancy-headshot.jpg"
+                src="/nancy-headshot.png"
                 alt="Nancy Ryan — Brain Health Coach"
                 className="w-full h-full object-cover"
               />

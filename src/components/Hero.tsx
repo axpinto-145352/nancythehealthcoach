@@ -57,7 +57,7 @@ const Hero = () => {
           <div className="relative hidden lg:block">
             <div className="bg-nancy-sage rounded-3xl aspect-[3/4] relative overflow-hidden">
               <img
-                src="/nancy-headshot.jpg"
+                src="/nancy-headshot.png"
                 alt="Nancy Ryan — Brain Health Coach"
                 className="w-full h-full object-cover"
               />
