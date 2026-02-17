@@ -1,7 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
-const Navbar = () => {
+interface NavbarProps {
+  onNavigate?: (hash: string) => void;
+}
+
+const Navbar = ({ onNavigate }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -18,8 +22,31 @@ const Navbar = () => {
     { label: 'Services', href: '#services' },
     { label: 'Testimonials', href: '#testimonials' },
     { label: 'FAQ', href: '#faq' },
-    { label: 'Blog', href: '#blog' },
+    { label: 'Blog', href: '#blog-page' },
   ];
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    // For non-page routes (section anchors on homepage), check if we're on a subpage
+    const isSubPage = window.location.hash.startsWith('#blog/') ||
+      window.location.hash === '#blog-page' ||
+      window.location.hash === '#starter-kit';
+
+    if (href === '#blog-page' || href === '#starter-kit') {
+      e.preventDefault();
+      if (onNavigate) onNavigate(href);
+    } else if (isSubPage && href !== '#blog-page') {
+      // Navigate back to homepage section
+      e.preventDefault();
+      window.location.hash = href || '#';
+      // Force a page reload for section navigation from subpages
+      if (href.startsWith('#') && href !== '#') {
+        window.location.hash = '';
+        setTimeout(() => {
+          window.location.hash = href;
+        }, 50);
+      }
+    }
+  };
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -27,7 +54,11 @@ const Navbar = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#" className="flex items-center space-x-2">
+          <a
+            href="#"
+            onClick={(e) => handleClick(e, '#')}
+            className="flex items-center space-x-2"
+          >
             <img src={`${import.meta.env.BASE_URL}logo-icon.svg`} alt="Nancy The Health Coach" className="h-10 w-10" />
             <span className={`font-display font-bold text-lg md:text-xl ${
               scrolled ? 'text-nancy-charcoal' : 'text-nancy-charcoal'
@@ -41,6 +72,7 @@ const Navbar = () => {
               <a
                 key={link.label}
                 href={link.href}
+                onClick={(e) => handleClick(e, link.href)}
                 className={`text-sm font-medium transition-colors hover:text-nancy-teal ${
                   scrolled ? 'text-nancy-charcoal' : 'text-nancy-charcoal'
                 }`}
@@ -74,7 +106,10 @@ const Navbar = () => {
               <a
                 key={link.label}
                 href={link.href}
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => {
+                  handleClick(e, link.href);
+                  setIsOpen(false);
+                }}
                 className="block text-nancy-charcoal hover:text-nancy-teal font-medium py-2"
               >
                 {link.label}

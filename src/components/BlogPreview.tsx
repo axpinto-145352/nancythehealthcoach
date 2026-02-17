@@ -1,29 +1,12 @@
 import { ArrowRight, Clock, Tag } from 'lucide-react';
+import { blogPosts } from '../data/blogPosts';
 
-const BlogPreview = () => {
-  const posts = [
-    {
-      title: 'What Is a Brain Health Coach? And Do You Need One?',
-      excerpt: "If you've never heard of brain health coaching, you're not alone. But here's why it might be exactly what your brain is asking for.",
-      category: 'Brain Health',
-      readTime: '7 min read',
-      color: 'bg-nancy-teal',
-    },
-    {
-      title: 'The ADHD-Sugar Connection: How Cutting Sugar Changed My Clients\' Focus',
-      excerpt: "Sugar isn't just bad for your waistline — it's hijacking your dopamine system. Here's what happened when my clients quit.",
-      category: 'ADHD & Nutrition',
-      readTime: '6 min read',
-      color: 'bg-nancy-coral',
-    },
-    {
-      title: 'Gut-Brain Connection 101: Why Your Stomach Is Your Second Brain',
-      excerpt: "That gut feeling? It's not just a metaphor. Your gut and brain are in constant communication — and most people's lines are scrambled.",
-      category: 'Gut Health',
-      readTime: '8 min read',
-      color: 'bg-nancy-gold',
-    },
-  ];
+interface BlogPreviewProps {
+  onNavigate?: (hash: string) => void;
+}
+
+const BlogPreview = ({ onNavigate }: BlogPreviewProps) => {
+  const featuredPosts = blogPosts.slice(0, 3);
 
   return (
     <section id="blog" className="section-padding bg-white">
@@ -38,9 +21,10 @@ const BlogPreview = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {posts.map((post, i) => (
+          {featuredPosts.map((post) => (
             <article
-              key={i}
+              key={post.slug}
+              onClick={() => onNavigate?.(`#blog/${post.slug}`)}
               className="bg-nancy-cream rounded-2xl overflow-hidden card-hover group cursor-pointer"
             >
               {/* Color banner */}
@@ -73,6 +57,17 @@ const BlogPreview = () => {
               </div>
             </article>
           ))}
+        </div>
+
+        {/* View All Articles Link */}
+        <div className="text-center mt-10">
+          <button
+            onClick={() => onNavigate?.('#blog-page')}
+            className="btn-secondary inline-flex items-center space-x-2"
+          >
+            <span>View All Articles</span>
+            <ArrowRight className="h-4 w-4" />
+          </button>
         </div>
       </div>
     </section>
