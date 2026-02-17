@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Brain } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="#" className="flex items-center space-x-2">
-            <Brain className={`h-8 w-8 ${scrolled ? 'text-nancy-teal' : 'text-nancy-teal'}`} />
+            <img src="/logo-icon.svg" alt="Nancy The Health Coach" className="h-10 w-10" />
             <span className={`font-display font-bold text-lg md:text-xl ${
               scrolled ? 'text-nancy-charcoal' : 'text-nancy-charcoal'
             }`}>

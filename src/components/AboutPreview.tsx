@@ -55,12 +55,15 @@ const AboutPreview = () => {
             </p>
 
             <div className="bg-nancy-sage rounded-xl p-5 mb-6">
-              <p className="text-sm text-nancy-charcoal">
-                <strong className="text-nancy-teal">Credentials:</strong> Master-Certified Health
-                Coach + Elite Brain Health Coach from{' '}
-                <strong>Amen University</strong> (January 2026) — based on Dr. Daniel Amen's
-                research using over 210,000 brain SPECT scans.
-              </p>
+              <div className="flex items-center gap-4">
+                <img src="/amen-badge.svg" alt="Certified Elite Brain Health Coach - Amen University" className="h-24 w-24 flex-shrink-0" />
+                <p className="text-sm text-nancy-charcoal">
+                  <strong className="text-nancy-teal">Credentials:</strong> Master-Certified Health
+                  Coach + Elite Brain Health Coach from{' '}
+                  <strong>Amen University</strong> (January 2026) — based on Dr. Daniel Amen's
+                  research using over 210,000 brain SPECT scans.
+                </p>
+              </div>
             </div>
 
             <a
