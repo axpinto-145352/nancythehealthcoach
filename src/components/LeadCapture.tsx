@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import { Download, CheckCircle, BookOpen } from 'lucide-react';
 
-const LeadCapture = () => {
+interface LeadCaptureProps {
+  onNavigate?: (hash: string) => void;
+}
+
+const LeadCapture = ({ onNavigate }: LeadCaptureProps) => {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
@@ -17,7 +21,10 @@ const LeadCapture = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Mock PDF preview */}
-          <div className="relative mx-auto lg:mx-0">
+          <div
+            className="relative mx-auto lg:mx-0 cursor-pointer"
+            onClick={() => onNavigate?.('#starter-kit')}
+          >
             <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-[288px] transform rotate-[-3deg] hover:rotate-0 transition-transform duration-500">
               <div className="border-2 border-nancy-teal/20 rounded-lg p-6 text-center">
                 <BookOpen className="h-12 w-12 text-nancy-teal mx-auto mb-4" />
@@ -90,9 +97,17 @@ const LeadCapture = () => {
               </form>
             )}
 
-            <p className="text-xs text-nancy-gray-light mt-3">
-              No spam, ever. Just brain health insights from Nancy. Unsubscribe anytime.
-            </p>
+            <div className="flex items-center justify-between mt-3">
+              <p className="text-xs text-nancy-gray-light">
+                No spam, ever. Just brain health insights from Nancy. Unsubscribe anytime.
+              </p>
+              <button
+                onClick={() => onNavigate?.('#starter-kit')}
+                className="text-xs font-semibold text-nancy-teal hover:text-nancy-teal/80 transition-colors whitespace-nowrap ml-4"
+              >
+                Preview Kit &rarr;
+              </button>
+            </div>
           </div>
         </div>
       </div>

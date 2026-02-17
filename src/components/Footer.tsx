@@ -1,6 +1,19 @@
 import { Mail, Facebook, Instagram, Linkedin } from 'lucide-react';
 
-const Footer = () => {
+interface FooterProps {
+  onNavigate?: (hash: string) => void;
+}
+
+const Footer = ({ onNavigate }: FooterProps) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, hash: string) => {
+    e.preventDefault();
+    if (onNavigate) {
+      onNavigate(hash);
+    } else {
+      window.location.hash = hash;
+    }
+  };
+
   return (
     <footer className="bg-nancy-charcoal text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,7 +54,24 @@ const Footer = () => {
               <li><a href="#about" className="hover:text-nancy-teal transition-colors">About Nancy</a></li>
               <li><a href="#services" className="hover:text-nancy-teal transition-colors">Services & Pricing</a></li>
               <li><a href="#testimonials" className="hover:text-nancy-teal transition-colors">Testimonials</a></li>
-              <li><a href="#blog" className="hover:text-nancy-teal transition-colors">Blog</a></li>
+              <li>
+                <a
+                  href="#blog-page"
+                  onClick={(e) => handleNavClick(e, '#blog-page')}
+                  className="hover:text-nancy-teal transition-colors"
+                >
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#starter-kit"
+                  onClick={(e) => handleNavClick(e, '#starter-kit')}
+                  className="hover:text-nancy-teal transition-colors"
+                >
+                  Free Starter Kit
+                </a>
+              </li>
               <li><a href="#faq" className="hover:text-nancy-teal transition-colors">FAQ</a></li>
             </ul>
           </div>
