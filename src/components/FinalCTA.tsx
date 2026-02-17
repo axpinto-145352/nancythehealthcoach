@@ -41,13 +41,13 @@ const FinalCTA = () => {
           </a>
         </div>
 
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-xl mx-auto">
-          <p className="text-white/90 italic font-display text-lg leading-relaxed">
+        <div className="bg-white rounded-2xl p-8 md:p-10 max-w-xl mx-auto shadow-xl">
+          <p className="text-nancy-charcoal italic font-display text-lg md:text-xl leading-relaxed">
             "I started this work because my daughter was diagnosed with autism, my mother died of
             Alzheimer's, and I was drowning in anxiety and gut issues. I know what it feels like
             when your brain won't cooperate. And I know it can get better."
           </p>
-          <p className="text-nancy-gold font-semibold mt-3">— Nancy Ryan</p>
+          <p className="text-nancy-teal font-semibold mt-4">— Nancy Ryan</p>
         </div>
       </div>
     </section>

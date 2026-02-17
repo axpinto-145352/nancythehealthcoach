@@ -15,7 +15,7 @@ const AboutPreview = () => {
                 loading="lazy"
               />
               {/* Decorative quote overlay */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-nancy-teal to-nancy-teal/90 p-6 md:p-8">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-nancy-teal to-nancy-teal/90 p-6 md:p-8 text-center">
                 <p className="font-display text-white text-lg md:text-xl italic">
                   "I couldn't save my mom's brain. But I could help other people protect theirs."
                 </p>
@@ -55,8 +55,8 @@ const AboutPreview = () => {
             </p>
 
             <div className="bg-nancy-sage rounded-xl p-6 mb-6">
-              <div className="flex flex-col sm:flex-row items-center gap-5">
-                <img src={`${import.meta.env.BASE_URL}amen-badge.svg`} alt="Certified Elite Brain Health Coach - Amen University" className="h-32 w-32 sm:h-36 sm:w-36 flex-shrink-0" loading="lazy" />
+              <div className="flex flex-col items-center gap-4 text-center">
+                <img src={`${import.meta.env.BASE_URL}amen-badge.svg`} alt="Certified Elite Brain Health Coach - Amen University" className="h-48 w-48 sm:h-56 sm:w-56 flex-shrink-0" loading="lazy" />
                 <p className="text-sm text-nancy-charcoal">
                   <strong className="text-nancy-teal">Credentials:</strong> Master-Certified Health
                   Coach + Elite Brain Health Coach from{' '}
