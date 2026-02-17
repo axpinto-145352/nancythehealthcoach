@@ -29,7 +29,7 @@ const Hero = () => {
             </p>
 
             <p className="text-lg text-nancy-gray leading-relaxed mb-8">
-              I'm a Master-Certified Health Coach and Elite Brain Health Coach trained at{' '}
+              I'm a Master-Certified Health Coach and Elite Brain Health Coach Certified through{' '}
               <strong className="text-nancy-charcoal">Amen University</strong>, using research from
               over 210,000 brain SPECT scans to help you take control of your brain health.
             </p>
@@ -80,7 +80,7 @@ const Hero = () => {
             <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-lg p-4 max-w-[200px]">
               <p className="text-xs text-nancy-gray mb-1">Certified by</p>
               <p className="font-display font-bold text-nancy-charcoal text-sm">Amen University</p>
-              <p className="text-xs text-nancy-teal">Elite Brain Health Coach</p>
+              <p className="text-xs text-nancy-teal">Elite Brain Health Coach Certified</p>
             </div>
           </div>
         </div>

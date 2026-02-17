@@ -8,7 +8,7 @@ const QuizSection = () => {
             <span className="gradient-text">Trying to Tell You?</span>
           </h2>
           <p className="text-lg md:text-xl text-nancy-gray max-w-2xl mx-auto">
-            Take this quick assessment. No email required. Find out what your brain needs right now.
+            Take this quick assessment. Find out what your brain needs right now.
           </p>
         </div>
 
