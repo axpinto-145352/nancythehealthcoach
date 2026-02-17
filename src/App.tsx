@@ -136,7 +136,7 @@ function App() {
         founder: {
           '@type': 'Person',
           name: 'Nancy Ryan',
-          jobTitle: 'Master Certified Health Coach & Elite Brain Health Coach',
+          jobTitle: 'Master Certified Health Coach & Elite Brain Health Coach Certified - Amen University',
         },
         areaServed: { '@type': 'Country', name: 'United States' },
         address: {

@@ -29,7 +29,7 @@ export const blogPosts: BlogPost[] = [
     publishDate: '2025-10-23',
     updatedDate: '2026-02-15',
     author: 'Nancy Ryan',
-    authorCredentials: 'Master Certified Health Coach & Elite Brain Health Coach, Amen University',
+    authorCredentials: 'Master Certified Health Coach & Elite Brain Health Coach Certified - Amen University',
     keywords: ['autism brain health', 'autistic brain support', 'personalized autism strategies', 'brain health for autism', 'autism nutrition', 'autism sleep tips', 'autism and movement', 'autism calming strategies', 'Dr Amen autism', 'brain health coach autism', 'neurodiversity brain health', 'autism natural support', 'autism vitamin D', 'autistic brain potential', 'autism holistic approach'],
     content: `## Every Autistic Brain Is Different
 
@@ -154,7 +154,7 @@ If you'd like to explore what a personalized brain health plan could look like f
     publishDate: '2025-10-23',
     updatedDate: '2026-02-15',
     author: 'Nancy Ryan',
-    authorCredentials: 'Master Certified Health Coach & Elite Brain Health Coach, Amen University',
+    authorCredentials: 'Master Certified Health Coach & Elite Brain Health Coach Certified - Amen University',
     keywords: ['natural ADHD treatment', 'ADHD without medication', 'natural ways to heal ADHD', 'ADHD brain health', 'ADHD nutrition', 'ADHD supplements', 'ADHD gut health', 'ADHD brain type', 'Dr Amen ADHD', 'ADHD mindfulness', 'ADHD natural remedies', 'ADHD sleep', 'ADHD exercise', 'ADHD omega-3', 'brain health coach ADHD', 'ADHD sunlight', 'ADHD holistic treatment'],
     content: `Hey there! Oh my gosh, if you're reading this, chances are you or someone you love is dealing with **ADHD** — and you're wondering if there's more you can do beyond medication. First, let me say: **you're not alone**, and you're definitely not broken.
 
@@ -312,7 +312,7 @@ That's why having a **brain health coach** in your corner can make such a differ
     publishDate: '2025-10-23',
     updatedDate: '2026-02-15',
     author: 'Nancy Ryan',
-    authorCredentials: 'Master Certified Health Coach & Elite Brain Health Coach, Amen University',
+    authorCredentials: 'Master Certified Health Coach & Elite Brain Health Coach Certified - Amen University',
     keywords: ['gratitude brain health', 'gratitude neuroscience', 'gratitude and dopamine', 'gratitude and serotonin', 'thankfulness brain benefits', 'gratitude habits', 'brain health gratitude', 'prefrontal cortex gratitude', 'amygdala and gratitude', 'gratitude mood', 'gratitude focus', 'gratitude resilience', 'Dr Amen gratitude', 'gratitude practice brain', 'brain health coach gratitude'],
     content: `## Gratitude Is More Than a Good Vibe
 
@@ -456,7 +456,7 @@ As a **brain health coach**, I've seen gratitude practices transform clients who
     publishDate: '2026-02-05',
     updatedDate: '2026-02-15',
     author: 'Nancy Ryan',
-    authorCredentials: 'Master Certified Health Coach & Elite Brain Health Coach, Amen University',
+    authorCredentials: 'Master Certified Health Coach & Elite Brain Health Coach Certified - Amen University',
     keywords: ['brain fog', 'brain fog causes', 'how to fix brain fog', 'brain fog treatment', 'what causes brain fog', 'mental clarity', 'brain fog diet', 'brain fog supplements', 'brain health coach brain fog'],
     content: `## What Is Brain Fog, Really?
 
@@ -588,7 +588,7 @@ As a **certified brain health coach in San Diego** (virtual sessions available n
     publishDate: '2026-02-08',
     updatedDate: '2026-02-16',
     author: 'Nancy Ryan',
-    authorCredentials: 'Master Certified Health Coach & Elite Brain Health Coach, Amen University',
+    authorCredentials: 'Master Certified Health Coach & Elite Brain Health Coach Certified - Amen University',
     keywords: ['brain boosting foods', 'foods for brain health', 'brain healthy diet', 'best foods for brain', 'brain food', 'foods that improve focus', 'brain nutrition', 'cognitive health diet', 'brain health coach nutrition'],
     content: `## Your Brain Is Hungry — Are You Feeding It Right?
 
@@ -698,7 +698,7 @@ You don't need to overhaul your entire diet overnight. Start by adding one of th
     publishDate: '2026-02-12',
     updatedDate: '2026-02-17',
     author: 'Nancy Ryan',
-    authorCredentials: 'Master Certified Health Coach & Elite Brain Health Coach, Amen University',
+    authorCredentials: 'Master Certified Health Coach & Elite Brain Health Coach Certified - Amen University',
     keywords: ['break sugar addiction', 'sugar detox plan', 'quit sugar', 'how to stop eating sugar', '7 day sugar detox', 'sugar detox symptoms', 'sugar withdrawal', 'sugar and brain health', 'sugar addiction brain', 'brain health coach sugar detox'],
     content: `## Sugar Addiction Is a Brain Problem, Not a Willpower Problem
 

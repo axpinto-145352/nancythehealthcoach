@@ -42,7 +42,7 @@ const BlogPage = ({ onNavigate }: BlogPageProps) => {
             Brain Health <span className="text-nancy-teal">Insights</span>
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Science-backed articles on brain health, nutrition, ADHD, gut health, and sugar detox — from a certified Elite Brain Health Coach.
+            Science-backed articles on brain health, nutrition, ADHD, gut health, and sugar detox — from an Elite Brain Health Coach Certified - Amen University.
           </p>
         </div>
       </div>

@@ -35,7 +35,7 @@ const FAQ = () => {
     },
     {
       q: 'What certifications do you have?',
-      a: "I'm a Master-Certified Health Coach (MCHC) and a Certified Elite Brain Health Coach from Amen University (January 2026). My training is based on Dr. Daniel Amen's research using over 210,000 brain SPECT scans.",
+      a: "I'm a Master-Certified Health Coach (MCHC) and an Elite Brain Health Coach Certified through Amen University (January 2026). My training is based on Dr. Daniel Amen's research using over 210,000 brain SPECT scans.",
     },
   ];
 
