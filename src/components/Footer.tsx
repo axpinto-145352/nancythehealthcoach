@@ -1,16 +1,16 @@
 import { Mail, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 interface FooterProps {
-  onNavigate?: (hash: string) => void;
+  onNavigate?: (target: string) => void;
 }
 
 const Footer = ({ onNavigate }: FooterProps) => {
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, hash: string) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
     e.preventDefault();
     if (onNavigate) {
-      onNavigate(hash);
+      onNavigate(target);
     } else {
-      window.location.hash = hash;
+      window.location.href = import.meta.env.BASE_URL + target;
     }
   };
 
@@ -56,8 +56,8 @@ const Footer = ({ onNavigate }: FooterProps) => {
               <li><a href="#testimonials" className="hover:text-nancy-teal transition-colors">Testimonials</a></li>
               <li>
                 <a
-                  href="#blog-page"
-                  onClick={(e) => handleNavClick(e, '#blog-page')}
+                  href={`${import.meta.env.BASE_URL}blog`}
+                  onClick={(e) => handleNavClick(e, 'blog')}
                   className="hover:text-nancy-teal transition-colors"
                 >
                   Blog
@@ -65,8 +65,8 @@ const Footer = ({ onNavigate }: FooterProps) => {
               </li>
               <li>
                 <a
-                  href="#starter-kit"
-                  onClick={(e) => handleNavClick(e, '#starter-kit')}
+                  href={`${import.meta.env.BASE_URL}starter-kit`}
+                  onClick={(e) => handleNavClick(e, 'starter-kit')}
                   className="hover:text-nancy-teal transition-colors"
                 >
                   Free Starter Kit

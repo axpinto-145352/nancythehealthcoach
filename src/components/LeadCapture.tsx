@@ -23,7 +23,7 @@ const LeadCapture = ({ onNavigate }: LeadCaptureProps) => {
           {/* Mock PDF preview */}
           <div
             className="relative mx-auto lg:mx-0 cursor-pointer"
-            onClick={() => onNavigate?.('#starter-kit')}
+            onClick={() => onNavigate?.('starter-kit')}
           >
             <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-[288px] transform rotate-[-3deg] hover:rotate-0 transition-transform duration-500">
               <div className="border-2 border-nancy-teal/20 rounded-lg p-6 text-center">
@@ -102,7 +102,7 @@ const LeadCapture = ({ onNavigate }: LeadCaptureProps) => {
                 No spam, ever. Just brain health insights from Nancy. Unsubscribe anytime.
               </p>
               <button
-                onClick={() => onNavigate?.('#starter-kit')}
+                onClick={() => onNavigate?.('starter-kit')}
                 className="text-xs font-semibold text-nancy-teal hover:text-nancy-teal/80 transition-colors whitespace-nowrap ml-4"
               >
                 Preview Kit &rarr;

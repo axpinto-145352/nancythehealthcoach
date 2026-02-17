@@ -17,6 +17,7 @@ import StickyCTA from './components/StickyCTA';
 import BlogPage from './components/BlogPage';
 import BlogPost from './components/BlogPost';
 import StarterKit from './components/StarterKit';
+import { JsonLd } from './components/JsonLd';
 
 type Route =
   | { page: 'home' }
@@ -24,12 +25,19 @@ type Route =
   | { page: 'blog-post'; slug: string }
   | { page: 'starter-kit' };
 
-function parseHash(hash: string): Route {
-  const h = hash.replace(/^#/, '');
-  if (h === 'blog-page') return { page: 'blog-page' };
-  if (h === 'starter-kit') return { page: 'starter-kit' };
-  if (h.startsWith('blog/')) {
-    const slug = h.slice(5);
+const BASE = import.meta.env.BASE_URL;
+
+function parseRoute(pathname: string): Route {
+  let path = pathname;
+  if (path.startsWith(BASE)) {
+    path = path.slice(BASE.length);
+  }
+  path = path.replace(/^\/|\/$/g, '');
+
+  if (path === 'blog') return { page: 'blog-page' };
+  if (path === 'starter-kit') return { page: 'starter-kit' };
+  if (path.startsWith('blog/')) {
+    const slug = path.slice(5);
     if (slug) return { page: 'blog-post', slug };
     return { page: 'blog-page' };
   }
@@ -37,23 +45,39 @@ function parseHash(hash: string): Route {
 }
 
 function App() {
-  const [route, setRoute] = useState<Route>(() => parseHash(window.location.hash));
+  const [route, setRoute] = useState<Route>(() => parseRoute(window.location.pathname));
 
   useEffect(() => {
-    const handleHashChange = () => {
-      const newRoute = parseHash(window.location.hash);
-      setRoute(newRoute);
-      // Only scroll to top for page navigations, not section anchors
-      if (newRoute.page !== 'home') {
-        window.scrollTo(0, 0);
-      }
+    const handlePopState = () => {
+      setRoute(parseRoute(window.location.pathname));
     };
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
-  const navigate = (hash: string) => {
-    window.location.hash = hash;
+  const navigate = (target: string) => {
+    if (target.startsWith('#')) {
+      // Section anchor on homepage
+      if (route.page !== 'home') {
+        window.history.pushState({}, '', BASE);
+        setRoute({ page: 'home' });
+        setTimeout(() => {
+          const el = document.querySelector(target);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }, 150);
+      } else {
+        const el = document.querySelector(target);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else if (target === '') {
+      window.history.pushState({}, '', BASE);
+      setRoute({ page: 'home' });
+      window.scrollTo(0, 0);
+    } else {
+      window.history.pushState({}, '', BASE + target);
+      setRoute(parseRoute(BASE + target));
+      window.scrollTo(0, 0);
+    }
   };
 
   if (route.page === 'blog-page') {
@@ -103,6 +127,25 @@ function App() {
       <FinalCTA />
       <Footer onNavigate={navigate} />
       <StickyCTA />
+      <JsonLd data={{
+        '@context': 'https://schema.org',
+        '@type': 'HealthBusiness',
+        name: 'Nancy The Health Coach',
+        description: 'Brain health coaching for busy professionals. Helping you reclaim focus, energy, and clarity through science-backed nutrition strategies.',
+        url: window.location.origin + BASE,
+        founder: {
+          '@type': 'Person',
+          name: 'Nancy Ryan',
+          jobTitle: 'Master Certified Health Coach & Elite Brain Health Coach',
+        },
+        areaServed: { '@type': 'Country', name: 'United States' },
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'San Diego',
+          addressRegion: 'CA',
+          addressCountry: 'US',
+        },
+      }} />
     </div>
   );
 }
