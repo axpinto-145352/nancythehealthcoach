@@ -9,7 +9,7 @@ const AboutPreview = () => {
           <div className="relative">
             <div className="bg-nancy-sage rounded-3xl aspect-[4/5] relative overflow-hidden">
               <img
-                src={`${import.meta.env.BASE_URL}nancy-mom.png`}
+                src={`${import.meta.env.BASE_URL}nancy-mom-update.png`}
                 alt="Nancy Ryan with her mother"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -60,8 +60,7 @@ const AboutPreview = () => {
                 <p className="text-sm text-nancy-charcoal">
                   <strong className="text-nancy-teal">Credentials:</strong> Elite Brain Health Coach
                   Certified —{' '}
-                  <strong>Amen University</strong> (January 2026) — based on Dr. Daniel Amen's
-                  research using over 210,000 brain SPECT scans.
+                  <strong>Amen University</strong> (January 2026)
                 </p>
               </div>
             </div>

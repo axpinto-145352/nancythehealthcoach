@@ -34,7 +34,7 @@ const StickyCTA = () => {
             Ready to talk about your brain health?
           </p>
           <a
-            href="https://calendly.com"
+            href="https://calendly.com/nancythehealthcoach-1/15min"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary text-sm py-2.5 w-full flex items-center justify-center space-x-2"
@@ -48,7 +48,7 @@ const StickyCTA = () => {
       {/* Mobile: sticky bottom bar */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 px-3 pt-3 safe-bottom">
         <a
-          href="https://calendly.com"
+          href="https://calendly.com/nancythehealthcoach-1/15min"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-primary w-full flex items-center justify-center space-x-2 py-3"

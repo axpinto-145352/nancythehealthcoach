@@ -30,13 +30,12 @@ const Hero = () => {
 
             <p className="text-lg text-nancy-gray leading-relaxed mb-8">
               I'm an Elite Brain Health Coach Certified through{' '}
-              <strong className="text-nancy-charcoal">Amen University</strong>, using research from
-              over 210,000 brain SPECT scans to help you take control of your brain health.
+              <strong className="text-nancy-charcoal">Amen University</strong>, helping you take control of your brain health.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
-                href="https://calendly.com"
+                href="https://calendly.com/nancythehealthcoach-1/15min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-center flex items-center justify-center space-x-2"
@@ -57,7 +56,7 @@ const Hero = () => {
           <div className="relative lg:hidden mx-auto max-w-sm">
             <div className="bg-nancy-sage rounded-3xl aspect-[3/4] relative overflow-hidden">
               <img
-                src={`${import.meta.env.BASE_URL}nancy-headshot.png`}
+                src={`${import.meta.env.BASE_URL}nancy-headshot-update.png`}
                 alt="Nancy Ryan — Brain Health Coach"
                 className="w-full h-full object-cover"
               />
@@ -69,7 +68,7 @@ const Hero = () => {
           <div className="relative hidden lg:block">
             <div className="bg-nancy-sage rounded-3xl aspect-[3/4] relative overflow-hidden">
               <img
-                src={`${import.meta.env.BASE_URL}nancy-headshot.png`}
+                src={`${import.meta.env.BASE_URL}nancy-headshot-update.png`}
                 alt="Nancy Ryan — Brain Health Coach"
                 className="w-full h-full object-cover"
               />

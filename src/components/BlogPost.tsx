@@ -195,7 +195,7 @@ const BlogPost = ({ slug, onNavigate }: BlogPostProps) => {
             Book a free consultation with Nancy and get a personalized brain health plan tailored to your unique needs.
           </p>
           <a
-            href="https://calendly.com"
+            href="https://calendly.com/nancythehealthcoach-1/15min"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center bg-white text-nancy-teal px-6 py-3 rounded-xl font-semibold hover:bg-nancy-cream transition-colors"
@@ -208,7 +208,7 @@ const BlogPost = ({ slug, onNavigate }: BlogPostProps) => {
         {/* Author Bio */}
         <div className="mt-12 bg-white rounded-2xl p-6 flex items-start space-x-4">
           <img
-            src={`${import.meta.env.BASE_URL}nancy-headshot.png`}
+            src={`${import.meta.env.BASE_URL}nancy-headshot-update.png`}
             alt="Nancy Ryan"
             className="w-16 h-16 rounded-full object-cover flex-shrink-0"
           />

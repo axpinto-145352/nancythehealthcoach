@@ -452,7 +452,7 @@ const StarterKit = ({ onNavigate }: StarterKitProps) => {
             Want personalized guidance through your sugar detox and beyond?
           </p>
           <a
-            href="https://calendly.com"
+            href="https://calendly.com/nancythehealthcoach-1/15min"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary inline-flex items-center space-x-2"
