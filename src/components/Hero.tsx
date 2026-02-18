@@ -19,18 +19,17 @@ const Hero = () => {
 
             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-nancy-charcoal mb-6 leading-tight">
               Hi, I'm Nancy.{' '}
-              <span className="gradient-text">I Help People Heal Their Brains Through Nutrition.</span>
+              <span className="gradient-text">I help caregivers of seniors and adults with special needs ditch sugar, clear brain fog, and protect their long-term brain health — so they can feel steady, focused, and energized in the life they're carrying.</span>
             </h1>
 
             <p className="text-lg md:text-xl text-nancy-gray leading-relaxed mb-4">
-              Whether you're struggling with brain fog, ADHD, sugar cravings, or worried about
-              cognitive decline — I've been where you are. As a mom, a daughter, and a health coach,
-              I've seen firsthand how the right nutrition can change everything.
+              Whether you're struggling with brain fog, sugar cravings, or worried about
+              cognitive decline — I've been where you are. As the mom of a high-functioning autistic adult, a daughter, and a brain health coach, I've seen firsthand how the right support — from nutrition and lifestyle shifts to mindset and daily habits — can transform focus, energy, and overall well-being. I don't just teach this work. I've lived it.
             </p>
 
             <p className="text-lg text-nancy-gray leading-relaxed mb-8">
-              I'm an Elite Brain Health Coach Certified through{' '}
-              <strong className="text-nancy-charcoal">Amen University</strong>, helping you take control of your brain health.
+              I'm Elite Brain Health Coach Certified through{' '}
+              <strong className="text-nancy-charcoal">Amen University</strong> helping you take control of your brain health.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

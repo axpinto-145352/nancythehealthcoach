@@ -9,7 +9,7 @@ const AboutPreview = () => {
           <div className="relative">
             <div className="bg-nancy-sage rounded-3xl aspect-[4/5] relative overflow-hidden">
               <img
-                src={`${import.meta.env.BASE_URL}nancy-mom-update.png`}
+                src={`${import.meta.env.BASE_URL}nancy-mom-2.png`}
                 alt="Nancy Ryan with her mother"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -42,6 +42,18 @@ const AboutPreview = () => {
               brain function. I started changing what our family ate, and I watched my daughter
               flourish.
             </p>
+
+            <div className="flex items-center gap-4 mb-4">
+              <img
+                src={`${import.meta.env.BASE_URL}nancy-daughter.png`}
+                alt="Nancy's daughter"
+                className="w-24 h-24 rounded-xl object-cover flex-shrink-0"
+                loading="lazy"
+              />
+              <p className="text-nancy-gray leading-relaxed italic text-sm">
+                "My daughter inspired me to learn everything I could about brain health. She's the reason I do this work."
+              </p>
+            </div>
 
             <p className="text-nancy-gray leading-relaxed mb-4">
               Then I turned the lens on myself. I'd been living with anxiety and gut issues for
