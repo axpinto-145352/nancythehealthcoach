@@ -58,8 +58,8 @@ const AboutPreview = () => {
               <div className="flex flex-col items-center gap-4 text-center">
                 <img src={`${import.meta.env.BASE_URL}amen-badge.png`} alt="Elite Brain Health Coach Certified - Amen University" className="h-48 w-48 sm:h-56 sm:w-56 flex-shrink-0" loading="lazy" />
                 <p className="text-sm text-nancy-charcoal">
-                  <strong className="text-nancy-teal">Credentials:</strong> Master-Certified Health
-                  Coach + Elite Brain Health Coach Certified —{' '}
+                  <strong className="text-nancy-teal">Credentials:</strong> Elite Brain Health Coach
+                  Certified —{' '}
                   <strong>Amen University</strong> (January 2026) — based on Dr. Daniel Amen's
                   research using over 210,000 brain SPECT scans.
                 </p>

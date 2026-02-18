@@ -47,7 +47,7 @@ const FinalCTA = () => {
             Alzheimer's, and I was drowning in anxiety and gut issues. I know what it feels like
             when your brain won't cooperate. And I know it can get better."
           </p>
-          <p className="text-nancy-teal font-semibold mt-4">— Nancy Ryan</p>
+          <p className="text-nancy-teal font-semibold mt-4">— Nancy Ryan, EBHCC</p>
         </div>
       </div>
     </section>

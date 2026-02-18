@@ -213,7 +213,7 @@ const BlogPost = ({ slug, onNavigate }: BlogPostProps) => {
             className="w-16 h-16 rounded-full object-cover flex-shrink-0"
           />
           <div>
-            <h4 className="font-display font-bold text-nancy-charcoal">Nancy Ryan</h4>
+            <h4 className="font-display font-bold text-nancy-charcoal">Nancy Ryan, EBHCC</h4>
             <p className="text-sm text-nancy-teal font-medium mb-2">{post.authorCredentials}</p>
             <p className="text-sm text-nancy-gray leading-relaxed">
               Nancy helps busy professionals reclaim focus, energy, and mental clarity through science-backed

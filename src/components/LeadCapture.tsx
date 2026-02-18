@@ -38,7 +38,7 @@ const LeadCapture = ({ onNavigate }: LeadCaptureProps) => {
                   + Daily Timeline
                 </p>
                 <p className="text-[10px] text-nancy-gray-light mt-3">
-                  By Nancy Ryan, MCHC
+                  By Nancy Ryan, EBHCC
                 </p>
               </div>
             </div>

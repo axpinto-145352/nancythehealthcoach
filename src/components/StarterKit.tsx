@@ -230,7 +230,7 @@ const StarterKit = ({ onNavigate }: StarterKitProps) => {
             Your complete roadmap to breaking the sugar cycle and giving your brain the fuel it needs to thrive.
           </p>
           <p className="text-sm text-nancy-gold font-medium">
-            By Nancy Ryan, MCHC — Elite Brain Health Coach Certified - Amen University
+            By Nancy Ryan, EBHCC — Elite Brain Health Coach Certified - Amen University
           </p>
         </div>
       </div>
