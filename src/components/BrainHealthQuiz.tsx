@@ -246,7 +246,7 @@ const BrainHealthQuiz = () => {
 
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="https://calendly.com"
+                href="https://calendly.com/nancythehealthcoach-1/15min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary flex-1 text-center flex items-center justify-center space-x-2"

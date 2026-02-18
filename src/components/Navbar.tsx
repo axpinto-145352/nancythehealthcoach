@@ -82,7 +82,7 @@ const Navbar = ({ onNavigate }: NavbarProps) => {
               </a>
             ))}
             <a
-              href="https://calendly.com"
+              href="https://calendly.com/nancythehealthcoach-1/15min"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-sm"
@@ -117,7 +117,7 @@ const Navbar = ({ onNavigate }: NavbarProps) => {
               </a>
             ))}
             <a
-              href="https://calendly.com"
+              href="https://calendly.com/nancythehealthcoach-1/15min"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary block text-center mt-4"

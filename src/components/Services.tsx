@@ -18,7 +18,7 @@ const Services = () => {
       ],
       forWho: "You're curious but not ready for a full program. Or you need expert eyes on a specific issue.",
       cta: 'Book Your Breakthrough',
-      ctaLink: 'https://calendly.com',
+      ctaLink: 'https://calendly.com/nancythehealthcoach-1/15min',
     },
     {
       icon: TrendingUp,
@@ -39,7 +39,7 @@ const Services = () => {
       ],
       forWho: "Adults with ADHD, brain fog, or sugar addiction who are ready to make real, lasting changes.",
       cta: 'Start Your Transformation',
-      ctaLink: 'https://calendly.com',
+      ctaLink: 'https://calendly.com/nancythehealthcoach-1/15min',
     },
     {
       icon: Crown,
@@ -60,7 +60,7 @@ const Services = () => {
       ],
       forWho: "You want the highest level of support. Managing ADHD, burnout, or caring for aging parents.",
       cta: 'Apply for VIP',
-      ctaLink: 'https://calendly.com',
+      ctaLink: 'https://calendly.com/nancythehealthcoach-1/15min',
     },
   ];
 
@@ -157,7 +157,7 @@ const Services = () => {
               content with community accountability. Topics rotate quarterly.
             </p>
             <p className="text-nancy-teal font-bold mb-4">Starting at $297/person</p>
-            <a href="https://calendly.com" target="_blank" rel="noopener noreferrer" className="btn-secondary inline-block text-sm">
+            <a href="https://calendly.com/nancythehealthcoach-1/15min" target="_blank" rel="noopener noreferrer" className="btn-secondary inline-block text-sm">
               Join the Next Cohort
             </a>
           </div>
@@ -176,7 +176,7 @@ const Services = () => {
             <p className="text-nancy-gray text-sm mb-4">
               <strong>Previous clients:</strong> D'Vine Path, HNP Family Network
             </p>
-            <a href="https://calendly.com" target="_blank" rel="noopener noreferrer" className="btn-secondary inline-block text-sm">
+            <a href="https://calendly.com/nancythehealthcoach-1/15min" target="_blank" rel="noopener noreferrer" className="btn-secondary inline-block text-sm">
               Request Workshop Info
             </a>
           </div>

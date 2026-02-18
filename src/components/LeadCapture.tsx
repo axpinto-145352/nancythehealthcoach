@@ -33,9 +33,10 @@ const LeadCapture = ({ onNavigate }: LeadCaptureProps) => {
                 </h4>
                 <div className="w-16 h-0.5 bg-nancy-gold mx-auto my-3" />
                 <p className="text-xs text-nancy-gray">
-                  Sugar Detox Guide<br />
+                  Day-by-Day Plan<br />
+                  + Brain Timeline<br />
                   + Shopping List<br />
-                  + Daily Timeline
+                  + Sugar Swaps
                 </p>
                 <p className="text-[10px] text-nancy-gray-light mt-3">
                   By Nancy Ryan, EBHCC
@@ -54,14 +55,14 @@ const LeadCapture = ({ onNavigate }: LeadCaptureProps) => {
               Free: 7-Day Brain Health Starter Kit
             </h2>
             <p className="text-lg text-nancy-gray mb-2">
-              What happens to your brain when you quit sugar? Find out — and get the roadmap.
+              Your complete roadmap to breaking the sugar cycle and giving your brain the fuel it needs to thrive.
             </p>
             <ul className="space-y-2 mb-6">
               {[
-                'Day-by-day meal suggestions (simple, no-cook options included)',
-                'Sugar swap cheat sheet',
-                'What happens to your brain each day (timeline)',
-                'Printable shopping list',
+                'Day-by-day plan — exactly what to eat, do, and expect each day',
+                'Brain timeline — what happens in your brain each day off sugar',
+                'Printable shopping list with everything you need',
+                'Sugar swaps for your favorite sugary foods',
               ].map((item, i) => (
                 <li key={i} className="flex items-center text-sm text-nancy-charcoal">
                   <CheckCircle className="h-4 w-4 text-nancy-teal mr-2 flex-shrink-0" />
