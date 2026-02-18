@@ -135,8 +135,8 @@ function App() {
         url: window.location.origin + BASE,
         founder: {
           '@type': 'Person',
-          name: 'Nancy Ryan',
-          jobTitle: 'Master Certified Health Coach & Elite Brain Health Coach Certified - Amen University',
+          name: 'Nancy Ryan, EBHCC',
+          jobTitle: 'Elite Brain Health Coach Certified - Amen University',
         },
         areaServed: { '@type': 'Country', name: 'United States' },
         address: {
