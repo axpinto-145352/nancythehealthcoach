@@ -35,7 +35,7 @@ const FAQ = () => {
     },
     {
       q: 'What certifications do you have?',
-      a: "I'm an Elite Brain Health Coach Certified (EBHCC) through Amen University (January 2026).",
+      a: "I'm an Elite Brain Health Coach Certified (EBHCC) through Amen University (January 2026). Master Certified Health Coach (MCHC) through Dr. Sears Wellness Institute (Nov 2021).",
     },
   ];
 
