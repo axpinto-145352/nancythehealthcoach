@@ -5,8 +5,8 @@ const AboutPreview = () => {
     <section id="about" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Photo */}
-          <div className="relative">
+          {/* Photos */}
+          <div className="relative space-y-6">
             <div className="bg-nancy-sage rounded-3xl aspect-[4/5] relative overflow-hidden">
               <img
                 src={`${import.meta.env.BASE_URL}nancy-mom-2.png`}
@@ -18,6 +18,21 @@ const AboutPreview = () => {
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-nancy-teal to-nancy-teal/90 p-6 md:p-8 text-center">
                 <p className="font-display text-white text-lg md:text-xl italic">
                   "I couldn't save my mom's brain. But I could help other people protect theirs."
+                </p>
+                <p className="text-nancy-gold text-sm mt-2">— Nancy Ryan</p>
+              </div>
+            </div>
+
+            <div className="bg-nancy-sage rounded-3xl aspect-[4/3] relative overflow-hidden">
+              <img
+                src={`${import.meta.env.BASE_URL}nancy-daughter.png`}
+                alt="Nancy's daughter"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-nancy-charcoal to-nancy-charcoal/80 p-5 md:p-6 text-center">
+                <p className="font-display text-white text-base md:text-lg italic">
+                  "She's the reason I do this work. My daughter taught me that every brain is different — and every brain deserves support."
                 </p>
                 <p className="text-nancy-gold text-sm mt-2">— Nancy Ryan</p>
               </div>
@@ -42,18 +57,6 @@ const AboutPreview = () => {
               brain function. I started changing what our family ate, and I watched my daughter
               flourish.
             </p>
-
-            <div className="flex items-center gap-4 mb-4">
-              <img
-                src={`${import.meta.env.BASE_URL}nancy-daughter.png`}
-                alt="Nancy's daughter"
-                className="w-24 h-24 rounded-xl object-cover flex-shrink-0"
-                loading="lazy"
-              />
-              <p className="text-nancy-gray leading-relaxed italic text-sm">
-                "My daughter inspired me to learn everything I could about brain health. She's the reason I do this work."
-              </p>
-            </div>
 
             <p className="text-nancy-gray leading-relaxed mb-4">
               Then I turned the lens on myself. I'd been living with anxiety and gut issues for
