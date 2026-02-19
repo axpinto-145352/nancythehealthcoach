@@ -17,19 +17,18 @@ const Hero = () => {
               Brain Health Coach — San Diego & Virtual
             </div>
 
-            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-nancy-charcoal mb-6 leading-tight">
+            <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-nancy-charcoal mb-6 leading-tight">
               Hi, I'm Nancy.{' '}
               <span className="gradient-text">I help caregivers of seniors and adults with special needs ditch sugar, clear brain fog, and protect their brain health — so they feel steady, focused, and energized</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-nancy-gray leading-relaxed mb-4">
+            <p className="text-lg md:text-xl text-nancy-charcoal leading-relaxed mb-4">
               Whether you're struggling with brain fog, sugar cravings, or worried about
               cognitive decline — I've been where you are. As the mom of a high-functioning autistic adult, a daughter, and a brain health coach, I've seen firsthand how the right support — from nutrition and lifestyle shifts to mindset and daily habits — can transform focus, energy, and overall well-being. I don't just teach this work. I've lived it.
             </p>
 
-            <p className="text-lg text-nancy-gray leading-relaxed mb-8">
-              I'm Elite Brain Health Coach Certified through{' '}
-              <strong className="text-nancy-charcoal">Amen University</strong> helping you take control of your brain health.
+            <p className="text-lg text-nancy-charcoal leading-relaxed mb-8">
+              I'm Elite Brain Health Coach Certified through Amen University helping you take control of your brain health.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -48,6 +47,14 @@ const Hero = () => {
               >
                 Read My Story
               </a>
+            </div>
+
+            <div className="mt-6 flex justify-center lg:justify-start">
+              <img
+                src={`${import.meta.env.BASE_URL}amen-badge.png`}
+                alt="Elite Brain Health Coach Certified - Amen University"
+                className="h-24 w-24 sm:h-28 sm:w-28"
+              />
             </div>
           </div>
 
@@ -73,12 +80,6 @@ const Hero = () => {
               />
               {/* Decorative accent */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-nancy-teal/10 to-transparent h-32" />
-            </div>
-            {/* Floating credential badge */}
-            <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-lg p-4 max-w-[200px]">
-              <p className="text-xs text-nancy-gray mb-1">Certified by</p>
-              <p className="font-display font-bold text-nancy-charcoal text-sm">Amen University</p>
-              <p className="text-xs text-nancy-teal">Elite Brain Health Coach Certified</p>
             </div>
           </div>
         </div>

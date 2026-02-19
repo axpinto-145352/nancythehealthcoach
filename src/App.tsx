@@ -17,13 +17,15 @@ import StickyCTA from './components/StickyCTA';
 import BlogPage from './components/BlogPage';
 import BlogPost from './components/BlogPost';
 import StarterKit from './components/StarterKit';
+import Disclaimers from './components/Disclaimers';
 import { JsonLd } from './components/JsonLd';
 
 type Route =
   | { page: 'home' }
   | { page: 'blog-page' }
   | { page: 'blog-post'; slug: string }
-  | { page: 'starter-kit' };
+  | { page: 'starter-kit' }
+  | { page: 'disclaimers' };
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -36,6 +38,7 @@ function parseRoute(pathname: string): Route {
 
   if (path === 'blog') return { page: 'blog-page' };
   if (path === 'starter-kit') return { page: 'starter-kit' };
+  if (path === 'disclaimers') return { page: 'disclaimers' };
   if (path.startsWith('blog/')) {
     const slug = path.slice(5);
     if (slug) return { page: 'blog-post', slug };
@@ -105,6 +108,16 @@ function App() {
       <div className="min-h-screen">
         <Navbar onNavigate={navigate} />
         <StarterKit onNavigate={navigate} />
+        <Footer onNavigate={navigate} />
+      </div>
+    );
+  }
+
+  if (route.page === 'disclaimers') {
+    return (
+      <div className="min-h-screen">
+        <Navbar onNavigate={navigate} />
+        <Disclaimers onNavigate={navigate} />
         <Footer onNavigate={navigate} />
       </div>
     );

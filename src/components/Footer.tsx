@@ -101,6 +101,13 @@ const Footer = ({ onNavigate }: FooterProps) => {
           <div className="flex space-x-6 mt-3 md:mt-0">
             <a href="#" className="hover:text-nancy-teal transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-nancy-teal transition-colors">Terms of Service</a>
+            <a
+              href={`${import.meta.env.BASE_URL}disclaimers`}
+              onClick={(e) => handleNavClick(e, 'disclaimers')}
+              className="hover:text-nancy-teal transition-colors"
+            >
+              Disclaimers
+            </a>
           </div>
         </div>
       </div>

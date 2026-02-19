@@ -53,7 +53,7 @@ const Services = () => {
         '2-hour initial intensive assessment',
         '24 bi-weekly sessions (doubled)',
         'Priority text/email access (48hr)',
-        'Custom meal plans for your brain type',
+        'Custom sample meal plans for your brain type',
         'Supplement protocol + sourcing',
         'Family/partner coaching session',
         '30-day post-program follow-up',
@@ -174,7 +174,7 @@ const Services = () => {
               Professionals, The Sugar-Focus Connection, Nutrition for Neurodiverse Adults.
             </p>
             <p className="text-nancy-gray text-sm mb-4">
-              <strong>Previous clients:</strong> D'Vine Path, HNP Family Network
+              <strong>Previous clients:</strong> D'Vine Path, Hello Health Instructor for Communities, Self Determination 1:1 Coaching — Neurodiverse Clients
             </p>
             <a href="https://calendly.com/nancythehealthcoach-1/15min" target="_blank" rel="noopener noreferrer" className="btn-secondary inline-block text-sm">
               Request Workshop Info
