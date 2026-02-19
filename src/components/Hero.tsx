@@ -49,13 +49,7 @@ const Hero = () => {
               </a>
             </div>
 
-            <div className="mt-6 flex justify-center lg:justify-start">
-              <img
-                src={`${import.meta.env.BASE_URL}amen-badge.png`}
-                alt="Elite Brain Health Coach Certified - Amen University"
-                className="h-24 w-24 sm:h-28 sm:w-28"
-              />
-            </div>
+
           </div>
 
           {/* Mobile: Photo */}
