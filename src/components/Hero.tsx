@@ -19,7 +19,7 @@ const Hero = () => {
 
             <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-nancy-charcoal mb-6 leading-tight">
               Hi, I'm Nancy.{' '}
-              <span className="gradient-text">I help caregivers of seniors and adults with special needs ditch sugar, clear brain fog, and protect their brain health — so they feel steady, focused, and energized</span>
+              <span className="gradient-text">I help caregivers boost focus and protect brain health—without relying on sugar.</span>
             </h1>
 
             <p className="text-lg md:text-xl text-nancy-charcoal leading-relaxed mb-4">
