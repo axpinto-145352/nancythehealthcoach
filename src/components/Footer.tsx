@@ -73,6 +73,15 @@ const Footer = ({ onNavigate }: FooterProps) => {
                 </a>
               </li>
               <li><a href="#faq" className="hover:text-nancy-teal transition-colors">FAQ</a></li>
+              <li>
+                <a
+                  href={`${import.meta.env.BASE_URL}disclaimers`}
+                  onClick={(e) => handleNavClick(e, 'disclaimers')}
+                  className="hover:text-nancy-teal transition-colors"
+                >
+                  Disclaimers
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -86,13 +95,6 @@ const Footer = ({ onNavigate }: FooterProps) => {
               </div>
             </div>
 
-            <div className="flex items-center space-x-3 bg-white/5 rounded-lg p-3">
-              <img src={`${import.meta.env.BASE_URL}amen-badge.png`} alt="Elite Brain Health Coach Certified - Amen University" className="h-12 w-12 flex-shrink-0" loading="lazy" />
-              <div>
-                <p className="text-xs font-semibold text-white">Amen University</p>
-                <p className="text-[11px] text-gray-400">Elite Brain Health Coach Certified</p>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -101,13 +103,6 @@ const Footer = ({ onNavigate }: FooterProps) => {
           <div className="flex space-x-6 mt-3 md:mt-0">
             <a href="#" className="hover:text-nancy-teal transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-nancy-teal transition-colors">Terms of Service</a>
-            <a
-              href={`${import.meta.env.BASE_URL}disclaimers`}
-              onClick={(e) => handleNavClick(e, 'disclaimers')}
-              className="hover:text-nancy-teal transition-colors"
-            >
-              Disclaimers
-            </a>
           </div>
         </div>
       </div>
