@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync } from 'fs';
 
 // Update this when deploying to a custom domain
 const SITE_URL = 'https://nancythehealthcoach.com';
-const BASE_PATH = '/nancythehealthcoach';
+const BASE_PATH = '';
 
 // Extract blog slugs from the data file
 const blogData = readFileSync('src/data/blogPosts.ts', 'utf-8');
