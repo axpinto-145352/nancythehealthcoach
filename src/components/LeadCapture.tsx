@@ -98,13 +98,13 @@ const LeadCapture = ({ onNavigate }: LeadCaptureProps) => {
               </form>
             )}
 
-            <div className="flex items-center justify-between mt-3">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-3 gap-1 sm:gap-0">
               <p className="text-xs text-nancy-gray-light">
                 No spam, ever. Just brain health insights from Nancy. Unsubscribe anytime.
               </p>
               <button
                 onClick={() => onNavigate?.('starter-kit')}
-                className="text-xs font-semibold text-nancy-teal hover:text-nancy-teal/80 transition-colors whitespace-nowrap ml-4"
+                className="text-xs font-semibold text-nancy-teal hover:text-nancy-teal/80 transition-colors whitespace-nowrap"
               >
                 Preview Kit &rarr;
               </button>

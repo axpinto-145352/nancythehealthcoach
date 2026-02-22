@@ -41,7 +41,7 @@ const FinalCTA = () => {
           </a>
         </div>
 
-        <div className="bg-white rounded-2xl p-8 md:p-10 max-w-xl mx-auto shadow-xl">
+        <div className="bg-white rounded-2xl p-5 sm:p-8 md:p-10 max-w-xl mx-auto shadow-xl">
           <p className="text-nancy-charcoal italic font-display text-lg md:text-xl leading-relaxed">
             "I started this work because my daughter was diagnosed with autism, my mother died of
             Alzheimer's, and I was drowning in anxiety and gut issues. I know what it feels like

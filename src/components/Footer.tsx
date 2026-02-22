@@ -15,9 +15,9 @@ const Footer = ({ onNavigate }: FooterProps) => {
   };
 
   return (
-    <footer className="bg-nancy-charcoal text-white pt-16 pb-8">
+    <footer className="bg-nancy-charcoal text-white pt-10 sm:pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">

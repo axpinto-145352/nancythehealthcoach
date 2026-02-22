@@ -78,7 +78,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16">
           {tiers.map((tier, i) => (
             <div
               key={i}
@@ -95,7 +95,7 @@ const Services = () => {
                 </div>
               )}
 
-              <div className="p-8">
+              <div className="p-5 sm:p-8">
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-nancy-teal/10 mb-4">
                   <tier.icon className="h-6 w-6 text-nancy-teal" />
                 </div>
@@ -146,7 +146,7 @@ const Services = () => {
 
         {/* Group & Corporate */}
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-white rounded-2xl p-8 border border-gray-200 card-hover">
+          <div className="bg-white rounded-2xl p-5 sm:p-8 border border-gray-200 card-hover">
             <div className="flex items-center space-x-3 mb-4">
               <Users className="h-6 w-6 text-nancy-teal" />
               <h3 className="font-display text-xl font-bold text-nancy-charcoal">
@@ -163,7 +163,7 @@ const Services = () => {
             </a>
           </div>
 
-          <div className="bg-white rounded-2xl p-8 border border-gray-200 card-hover">
+          <div className="bg-white rounded-2xl p-5 sm:p-8 border border-gray-200 card-hover">
             <div className="flex items-center space-x-3 mb-4">
               <Building className="h-6 w-6 text-nancy-teal" />
               <h3 className="font-display text-xl font-bold text-nancy-charcoal">

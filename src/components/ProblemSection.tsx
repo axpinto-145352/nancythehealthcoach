@@ -36,11 +36,11 @@ const ProblemSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-10 sm:mb-12">
           {painPoints.map((point, i) => (
             <div
               key={i}
-              className="bg-nancy-cream rounded-2xl p-6 text-center card-hover border border-transparent hover:border-nancy-coral/20"
+              className="bg-nancy-cream rounded-2xl p-4 sm:p-6 text-center card-hover border border-transparent hover:border-nancy-coral/20"
             >
               <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-nancy-coral/10 mb-4">
                 <point.icon className="h-7 w-7 text-nancy-coral" />
@@ -52,7 +52,7 @@ const ProblemSection = () => {
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <div className="bg-nancy-sage rounded-2xl p-8 md:p-10 text-center">
+          <div className="bg-nancy-sage rounded-2xl p-5 sm:p-8 md:p-10 text-center">
             <p className="text-lg text-nancy-charcoal leading-relaxed mb-4">
               Maybe you're watching a parent's memory slip away and wondering —{' '}
               <em className="text-nancy-coral">is that going to be me?</em>

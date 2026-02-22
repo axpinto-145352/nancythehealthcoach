@@ -1,7 +1,7 @@
 const QuizSection = () => {
   return (
-    <section id="quiz" className="section-padding bg-nancy-cream">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="quiz" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-nancy-cream">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-nancy-charcoal mb-4 leading-tight">
             What's Your Brain{' '}
@@ -16,7 +16,7 @@ const QuizSection = () => {
           <iframe
             src="https://www.brainhealthassessment.com/"
             title="Brain Health Assessment"
-            className="w-full border-0 min-h-[300px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px]"
+            className="w-full border-0 min-h-[400px] sm:min-h-[450px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px]"
             sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
             referrerPolicy="no-referrer"
             loading="lazy"

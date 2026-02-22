@@ -20,7 +20,7 @@ const BlogPreview = ({ onNavigate }: BlogPreviewProps) => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {featuredPosts.map((post) => (
             <article
               key={post.slug}

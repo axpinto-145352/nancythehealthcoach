@@ -36,9 +36,9 @@ const BlogPage = ({ onNavigate }: BlogPageProps) => {
       }} />
 
       {/* Hero Banner */}
-      <div className="bg-nancy-charcoal pt-28 pb-16 px-4 sm:px-6 lg:px-8">
+      <div className="bg-nancy-charcoal pt-24 pb-10 sm:pt-28 sm:pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             Brain Health <span className="text-nancy-teal">Insights</span>
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
@@ -48,8 +48,8 @@ const BlogPage = ({ onNavigate }: BlogPageProps) => {
       </div>
 
       {/* Blog Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {blogPosts.map((post) => (
             <article
               key={post.slug}

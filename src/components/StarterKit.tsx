@@ -206,7 +206,7 @@ const StarterKit = ({ onNavigate }: StarterKitProps) => {
   return (
     <div className="min-h-screen bg-nancy-cream">
       {/* Hero */}
-      <div className="bg-gradient-to-br from-nancy-charcoal to-nancy-charcoal/95 pt-28 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <div className="bg-gradient-to-br from-nancy-charcoal to-nancy-charcoal/95 pt-24 pb-10 sm:pt-28 sm:pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-10 left-10 w-32 h-32 bg-nancy-teal rounded-full blur-3xl" />
           <div className="absolute bottom-10 right-10 w-40 h-40 bg-nancy-gold rounded-full blur-3xl" />
@@ -222,7 +222,7 @@ const StarterKit = ({ onNavigate }: StarterKitProps) => {
           <div className="inline-flex items-center bg-nancy-coral text-white text-sm font-bold px-4 py-1.5 rounded-full mb-6">
             FREE DOWNLOAD
           </div>
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
             7-Day Brain Health
             <span className="block text-nancy-teal">Starter Kit</span>
           </h1>
@@ -236,7 +236,7 @@ const StarterKit = ({ onNavigate }: StarterKitProps) => {
       </div>
 
       {/* What's Inside */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
         <div className="text-center mb-12">
           <h2 className="font-display text-3xl font-bold text-nancy-charcoal mb-4">
             What's Inside Your Starter Kit
@@ -246,7 +246,7 @@ const StarterKit = ({ onNavigate }: StarterKitProps) => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-10 sm:mb-16">
           {[
             { icon: Clock, title: 'Day-by-Day Plan', desc: 'Exactly what to eat, do, and expect each day' },
             { icon: Brain, title: 'Brain Timeline', desc: 'What happens in your brain each day off sugar' },
@@ -336,7 +336,7 @@ const StarterKit = ({ onNavigate }: StarterKitProps) => {
         </div>
 
         {/* Shopping List */}
-        <div className="bg-white rounded-2xl p-8 mb-16 shadow-sm">
+        <div className="bg-white rounded-2xl p-5 sm:p-8 mb-10 sm:mb-16 shadow-sm">
           <div className="text-center mb-8">
             <div className="w-14 h-14 bg-nancy-teal/10 rounded-2xl flex items-center justify-center mx-auto mb-3">
               <ShoppingCart className="h-7 w-7 text-nancy-teal" />
@@ -370,19 +370,19 @@ const StarterKit = ({ onNavigate }: StarterKitProps) => {
         </div>
 
         {/* Brain Health Timeline Infographic */}
-        <div className="bg-nancy-charcoal rounded-2xl p-8 mb-16 text-white">
-          <div className="text-center mb-8">
-            <h2 className="font-display text-3xl font-bold mb-2">
+        <div className="bg-nancy-charcoal rounded-2xl p-5 sm:p-8 mb-10 sm:mb-16 text-white">
+          <div className="text-center mb-6 sm:mb-8">
+            <h2 className="font-display text-2xl sm:text-3xl font-bold mb-2">
               What Happens to Your Brain When You Quit Sugar
             </h2>
-            <p className="text-gray-400">Your brain's transformation timeline</p>
+            <p className="text-gray-400 text-sm sm:text-base">Your brain's transformation timeline</p>
           </div>
 
           <div className="relative">
-            {/* Timeline Line */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-nancy-teal/30 -translate-x-1/2" />
+            {/* Timeline Line - visible on mobile (left) and desktop (center) */}
+            <div className="absolute left-3 sm:left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-nancy-teal/30 md:-translate-x-1/2" />
 
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               {[
                 { time: 'Hours 1–6', title: 'Blood Sugar Stabilizes', desc: 'Without sugar spikes, insulin levels normalize. Your brain begins receiving steady glucose from complex carbohydrates.', color: 'bg-nancy-teal' },
                 { time: 'Hours 12–24', title: 'Cravings Peak', desc: 'Dopamine-seeking pathways fire heavily. This is your brain\'s reward system demanding its fix — it will pass.', color: 'bg-nancy-coral' },
@@ -391,16 +391,19 @@ const StarterKit = ({ onNavigate }: StarterKitProps) => {
                 { time: 'Days 5–7', title: 'Clarity Emerges', desc: 'Neuroinflammation decreases. Brain fog lifts. Energy stabilizes. Taste buds recalibrate — whole foods taste sweeter.', color: 'bg-nancy-coral' },
                 { time: 'Week 2+', title: 'Brain Rewired', desc: 'New neural pathways strengthen. Sleep architecture improves. Gut microbiome shifts toward brain-supportive species.', color: 'bg-nancy-gold' },
               ].map((item, i) => (
-                <div key={i} className={`md:flex items-center ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8`}>
-                  <div className={`flex-1 ${i % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                <div key={i} className={`md:flex items-center ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-4 md:gap-8`}>
+                  {/* Mobile: left-aligned with timeline dot; Desktop: alternating */}
+                  <div className={`flex-1 pl-8 sm:pl-10 md:pl-0 relative ${i % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                    {/* Mobile timeline dot */}
+                    <div className="md:hidden absolute left-1.5 sm:left-2.5 top-1 w-3 h-3 rounded-full bg-nancy-teal border-2 border-white z-10" />
                     <span className={`inline-block text-xs font-bold ${item.color} text-white px-2 py-0.5 rounded mb-1`}>
                       {item.time}
                     </span>
-                    <h3 className="font-display font-bold text-lg mb-1">{item.title}</h3>
-                    <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
+                    <h3 className="font-display font-bold text-base sm:text-lg mb-1">{item.title}</h3>
+                    <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">{item.desc}</p>
                   </div>
                   <div className="hidden md:flex w-4 h-4 rounded-full bg-nancy-teal border-2 border-white flex-shrink-0 z-10" />
-                  <div className="flex-1" />
+                  <div className="flex-1 hidden md:block" />
                 </div>
               ))}
             </div>
@@ -408,7 +411,7 @@ const StarterKit = ({ onNavigate }: StarterKitProps) => {
         </div>
 
         {/* Email Capture / CTA */}
-        <div className="bg-gradient-to-br from-nancy-teal to-nancy-teal-light rounded-2xl p-8 text-center text-white">
+        <div className="bg-gradient-to-br from-nancy-teal to-nancy-teal-light rounded-2xl p-5 sm:p-8 text-center text-white">
           {submitted ? (
             <div className="animate-fadeIn py-4">
               <CheckCircle className="h-16 w-16 text-white mx-auto mb-4" />
