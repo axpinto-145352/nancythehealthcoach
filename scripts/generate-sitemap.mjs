@@ -1,8 +1,6 @@
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 
-// Update this when deploying to a custom domain
 const SITE_URL = 'https://nancythehealthcoach.com';
-const BASE_PATH = '';
 
 // Extract blog slugs from the data file
 const blogData = readFileSync('src/data/blogPosts.ts', 'utf-8');
@@ -12,11 +10,11 @@ const slugs = [...slugMatches].map(m => m[1]);
 const today = new Date().toISOString().split('T')[0];
 
 const urls = [
-  { loc: `${BASE_PATH}/`, priority: '1.0', changefreq: 'weekly', lastmod: today },
-  { loc: `${BASE_PATH}/blog`, priority: '0.8', changefreq: 'weekly', lastmod: today },
-  { loc: `${BASE_PATH}/starter-kit`, priority: '0.7', changefreq: 'monthly', lastmod: today },
+  { loc: '/', priority: '1.0', changefreq: 'weekly', lastmod: today },
+  { loc: '/blog', priority: '0.8', changefreq: 'weekly', lastmod: today },
+  { loc: '/starter-kit', priority: '0.7', changefreq: 'monthly', lastmod: today },
   ...slugs.map(slug => ({
-    loc: `${BASE_PATH}/blog/${slug}`,
+    loc: `/blog/${slug}`,
     priority: '0.9',
     changefreq: 'monthly',
     lastmod: today,
@@ -33,5 +31,9 @@ ${urls.map(u => `  <url>
   </url>`).join('\n')}
 </urlset>`;
 
-writeFileSync('dist/sitemap.xml', sitemap);
+// Write to both public/ (source of truth) and dist/ (build output)
+writeFileSync('public/sitemap.xml', sitemap);
+if (existsSync('dist')) {
+  writeFileSync('dist/sitemap.xml', sitemap);
+}
 console.log(`Generated sitemap.xml with ${urls.length} URLs`);
