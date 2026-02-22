@@ -1,4 +1,5 @@
 import { Zap, TrendingUp, Crown, Users, Building, Check, Star } from 'lucide-react';
+import { JsonLd } from './JsonLd';
 
 const Services = () => {
   const tiers = [
@@ -182,6 +183,31 @@ const Services = () => {
           </div>
         </div>
       </div>
+      <JsonLd data={{
+        '@context': 'https://schema.org',
+        '@type': 'HealthBusiness',
+        name: 'Nancy The Health Coach',
+        url: 'https://nancythehealthcoach.com',
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Brain Health Coaching Programs',
+          itemListElement: tiers.map(tier => ({
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: tier.name,
+              description: `${tier.tagline} ${tier.forWho}`,
+              provider: {
+                '@type': 'Person',
+                name: 'Nancy Ryan, EBHCC',
+              },
+            },
+            price: tier.price.replace(/[^0-9.]/g, ''),
+            priceCurrency: 'USD',
+            url: tier.ctaLink,
+          })),
+        },
+      }} />
     </section>
   );
 };

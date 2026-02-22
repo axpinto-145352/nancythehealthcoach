@@ -23,18 +23,18 @@ const AboutPreview = () => {
               </div>
             </div>
 
-            <div className="bg-nancy-sage rounded-3xl aspect-[4/3] relative overflow-hidden">
+            <div className="bg-nancy-sage rounded-3xl aspect-square sm:aspect-[4/3] relative overflow-hidden">
               <img
                 src={`${import.meta.env.BASE_URL}nancy-daughter.png`}
                 alt="Nancy's daughter"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-nancy-charcoal to-nancy-charcoal/80 p-5 md:p-6 text-center">
-                <p className="font-display text-white text-base md:text-lg italic">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-nancy-charcoal to-nancy-charcoal/80 p-4 sm:p-5 md:p-6 text-center">
+                <p className="font-display text-white text-sm sm:text-base md:text-lg italic">
                   "She's the reason I do this work. My daughter taught me that every brain is different — and every brain deserves support."
                 </p>
-                <p className="text-nancy-gold text-sm mt-2">— Nancy Ryan</p>
+                <p className="text-nancy-gold text-xs sm:text-sm mt-1 sm:mt-2">— Nancy Ryan</p>
               </div>
             </div>
           </div>

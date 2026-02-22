@@ -58,12 +58,10 @@ const Navbar = ({ onNavigate }: NavbarProps) => {
           <a
             href={import.meta.env.BASE_URL}
             onClick={(e) => { e.preventDefault(); onNavigate?.(''); }}
-            className="flex items-center space-x-2"
+            className="flex items-center space-x-2 min-w-0"
           >
-            <img src={`${import.meta.env.BASE_URL}logo-icon.svg`} alt="Nancy The Health Coach" className="h-10 w-10" />
-            <span className={`font-display font-bold text-lg md:text-xl ${
-              scrolled ? 'text-nancy-charcoal' : 'text-nancy-charcoal'
-            }`}>
+            <img src={`${import.meta.env.BASE_URL}logo-icon.svg`} alt="Nancy The Health Coach" className="h-8 w-8 flex-shrink-0 sm:h-10 sm:w-10" />
+            <span className="font-display font-bold text-base sm:text-lg md:text-xl text-nancy-charcoal truncate">
               Nancy<span className="text-nancy-teal">TheHealthCoach</span>
             </span>
           </a>
