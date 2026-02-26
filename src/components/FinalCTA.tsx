@@ -1,4 +1,5 @@
 import { Calendar, ArrowRight } from 'lucide-react';
+import TermsCallout from './TermsCallout';
 
 const FinalCTA = () => {
   return (
@@ -22,7 +23,7 @@ const FinalCTA = () => {
           No pressure, no sales pitch — just honest guidance from someone who's been there.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="https://calendly.com/nancythehealthcoach-1/15min"
             target="_blank"
@@ -40,6 +41,7 @@ const FinalCTA = () => {
             <ArrowRight className="h-5 w-5" />
           </a>
         </div>
+        <TermsCallout light className="text-center mb-8" />
 
         <div className="bg-white rounded-2xl p-5 sm:p-8 md:p-10 max-w-xl mx-auto shadow-xl">
           <p className="text-nancy-charcoal italic font-display text-lg md:text-xl leading-relaxed">

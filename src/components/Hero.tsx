@@ -1,4 +1,5 @@
 import { ArrowRight, Heart } from 'lucide-react';
+import TermsCallout from './TermsCallout';
 
 const Hero = () => {
   return (
@@ -48,7 +49,7 @@ const Hero = () => {
                 Read My Story
               </a>
             </div>
-
+            <TermsCallout className="text-center lg:text-left" />
 
           </div>
 

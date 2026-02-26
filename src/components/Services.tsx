@@ -1,5 +1,6 @@
 import { Zap, TrendingUp, Crown, Users, Building, Check, Star } from 'lucide-react';
 import { JsonLd } from './JsonLd';
+import TermsCallout from './TermsCallout';
 
 const Services = () => {
   const tiers = [
@@ -139,6 +140,7 @@ const Services = () => {
                 >
                   {tier.cta}
                 </a>
+                <TermsCallout className="text-center" />
               </div>
             </div>
           ))}
@@ -161,6 +163,7 @@ const Services = () => {
             <a href="https://calendly.com/nancythehealthcoach-1/15min" target="_blank" rel="noopener noreferrer" className="btn-secondary inline-block text-sm">
               Join the Next Cohort
             </a>
+            <TermsCallout />
           </div>
 
           <div className="bg-white rounded-2xl p-5 sm:p-8 border border-gray-200 card-hover">
@@ -180,6 +183,7 @@ const Services = () => {
             <a href="https://calendly.com/nancythehealthcoach-1/15min" target="_blank" rel="noopener noreferrer" className="btn-secondary inline-block text-sm">
               Request Workshop Info
             </a>
+            <TermsCallout />
           </div>
         </div>
       </div>

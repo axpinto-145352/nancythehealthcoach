@@ -20,7 +20,6 @@ import StarterKit from './components/StarterKit';
 import Disclaimers from './components/Disclaimers';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsConditions from './components/TermsConditions';
-import TermsGate from './components/TermsGate';
 import { JsonLd } from './components/JsonLd';
 
 type Route =
@@ -191,12 +190,7 @@ function App() {
     );
   };
 
-  return (
-    <>
-      {renderPage()}
-      <TermsGate onNavigate={navigate} />
-    </>
-  );
+  return renderPage();
 }
 
 export default App;

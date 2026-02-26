@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ArrowRight, ArrowLeft, Sparkles, Calendar, Download, Brain, Zap, Heart, Shield } from 'lucide-react';
+import TermsCallout from './TermsCallout';
 
 interface Question {
   id: number;
@@ -259,6 +260,7 @@ const BrainHealthQuiz = () => {
                 <span>Get Sugar Detox Guide</span>
               </button>
             </div>
+            <TermsCallout className="text-center" />
 
             <button
               onClick={resetQuiz}

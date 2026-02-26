@@ -16,6 +16,7 @@ import {
   Leaf,
   Loader2,
 } from 'lucide-react';
+import TermsCallout from './TermsCallout';
 
 const KIT_FORM_ID = import.meta.env.VITE_KIT_FORM_ID || '';
 const KIT_API_KEY = import.meta.env.VITE_KIT_API_KEY || 'W6yL0_TFEtMcaYILuvUUEQ';
@@ -488,6 +489,7 @@ const StarterKit = ({ onNavigate }: StarterKitProps) => {
           >
             <span>Book a Free Brain Health Consultation</span>
           </a>
+          <TermsCallout className="text-center" />
           <div className="mt-6">
             <button
               onClick={() => onNavigate('')}
