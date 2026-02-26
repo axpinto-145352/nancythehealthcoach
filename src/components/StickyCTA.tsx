@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Calendar, X } from 'lucide-react';
+import TermsCallout from './TermsCallout';
 
 const StickyCTA = () => {
   const [visible, setVisible] = useState(false);
@@ -42,11 +43,12 @@ const StickyCTA = () => {
             <Calendar className="h-4 w-4" />
             <span>Free 15-Min Call</span>
           </a>
+          <TermsCallout />
         </div>
       </div>
 
       {/* Mobile: sticky bottom bar */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 px-3 pt-3 safe-bottom">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 px-3 pt-2 safe-bottom">
         <a
           href="https://calendly.com/nancythehealthcoach-1/15min"
           target="_blank"
@@ -56,6 +58,7 @@ const StickyCTA = () => {
           <Calendar className="h-4 w-4" />
           <span>Book Free Consultation</span>
         </a>
+        <TermsCallout className="text-center pb-1" />
       </div>
     </>
   );
