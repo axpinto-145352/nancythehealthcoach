@@ -15,9 +15,9 @@ const Footer = ({ onNavigate }: FooterProps) => {
   };
 
   return (
-    <footer className="bg-nancy-charcoal text-white pt-16 pb-8">
+    <footer className="bg-nancy-charcoal text-white pt-10 sm:pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
@@ -34,13 +34,13 @@ const Footer = ({ onNavigate }: FooterProps) => {
               San Diego, CA &mdash; Virtual sessions available nationwide
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-nancy-teal transition-colors">
+              <a href="https://www.facebook.com/NancyJoHealthCoach" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-nancy-teal transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-nancy-teal transition-colors">
+              <a href="https://www.instagram.com/nancythehealthcoach/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-nancy-teal transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-nancy-teal transition-colors">
+              <a href="https://www.linkedin.com/in/nancy-jo-ryan-62b5625/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-nancy-teal transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
@@ -101,8 +101,20 @@ const Footer = ({ onNavigate }: FooterProps) => {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
           <p>&copy; 2026 Nancy Ryan. All rights reserved.</p>
           <div className="flex space-x-6 mt-3 md:mt-0">
-            <a href="#" className="hover:text-nancy-teal transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-nancy-teal transition-colors">Terms of Service</a>
+            <a
+              href={`${import.meta.env.BASE_URL}privacy-policy`}
+              onClick={(e) => handleNavClick(e, 'privacy-policy')}
+              className="hover:text-nancy-teal transition-colors"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href={`${import.meta.env.BASE_URL}terms`}
+              onClick={(e) => handleNavClick(e, 'terms')}
+              className="hover:text-nancy-teal transition-colors"
+            >
+              Terms &amp; Conditions
+            </a>
           </div>
         </div>
       </div>

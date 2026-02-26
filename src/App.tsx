@@ -18,6 +18,8 @@ import BlogPage from './components/BlogPage';
 import BlogPost from './components/BlogPost';
 import StarterKit from './components/StarterKit';
 import Disclaimers from './components/Disclaimers';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsConditions from './components/TermsConditions';
 import { JsonLd } from './components/JsonLd';
 
 type Route =
@@ -25,7 +27,9 @@ type Route =
   | { page: 'blog-page' }
   | { page: 'blog-post'; slug: string }
   | { page: 'starter-kit' }
-  | { page: 'disclaimers' };
+  | { page: 'disclaimers' }
+  | { page: 'privacy-policy' }
+  | { page: 'terms' };
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -39,6 +43,8 @@ function parseRoute(pathname: string): Route {
   if (path === 'blog') return { page: 'blog-page' };
   if (path === 'starter-kit') return { page: 'starter-kit' };
   if (path === 'disclaimers') return { page: 'disclaimers' };
+  if (path === 'privacy-policy') return { page: 'privacy-policy' };
+  if (path === 'terms') return { page: 'terms' };
   if (path.startsWith('blog/')) {
     const slug = path.slice(5);
     if (slug) return { page: 'blog-post', slug };
@@ -118,6 +124,26 @@ function App() {
       <div className="min-h-screen">
         <Navbar onNavigate={navigate} />
         <Disclaimers onNavigate={navigate} />
+        <Footer onNavigate={navigate} />
+      </div>
+    );
+  }
+
+  if (route.page === 'privacy-policy') {
+    return (
+      <div className="min-h-screen">
+        <Navbar onNavigate={navigate} />
+        <PrivacyPolicy onNavigate={navigate} />
+        <Footer onNavigate={navigate} />
+      </div>
+    );
+  }
+
+  if (route.page === 'terms') {
+    return (
+      <div className="min-h-screen">
+        <Navbar onNavigate={navigate} />
+        <TermsConditions onNavigate={navigate} />
         <Footer onNavigate={navigate} />
       </div>
     );

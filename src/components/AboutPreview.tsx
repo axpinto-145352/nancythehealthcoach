@@ -4,9 +4,9 @@ const AboutPreview = () => {
   return (
     <section id="about" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Photos */}
-          <div className="relative space-y-6">
+          <div className="relative space-y-4 sm:space-y-6">
             <div className="bg-nancy-sage rounded-3xl aspect-[4/5] relative overflow-hidden">
               <img
                 src={`${import.meta.env.BASE_URL}nancy-mom-2.png`}
@@ -15,8 +15,8 @@ const AboutPreview = () => {
                 loading="lazy"
               />
               {/* Decorative quote overlay */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-nancy-teal to-nancy-teal/90 p-6 md:p-8 text-center">
-                <p className="font-display text-white text-lg md:text-xl italic">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-nancy-teal to-nancy-teal/90 p-4 sm:p-6 md:p-8 text-center">
+                <p className="font-display text-white text-base sm:text-lg md:text-xl italic">
                   "I couldn't save my mom's brain. But I could help other people protect theirs."
                 </p>
                 <p className="text-nancy-gold text-sm mt-2">— Nancy Ryan</p>
@@ -71,7 +71,7 @@ const AboutPreview = () => {
 
             <div className="bg-nancy-sage rounded-xl p-6 mb-6">
               <div className="flex flex-col items-center gap-4 text-center">
-                <img src={`${import.meta.env.BASE_URL}amen-badge.png`} alt="Elite Brain Health Coach Certified - Amen University" className="h-48 w-48 sm:h-56 sm:w-56 flex-shrink-0" loading="lazy" />
+                <img src={`${import.meta.env.BASE_URL}amen-badge.png`} alt="Elite Brain Health Coach Certified - Amen University" className="h-36 w-36 sm:h-48 sm:w-48 md:h-56 md:w-56 flex-shrink-0" loading="lazy" />
                 <p className="text-sm text-nancy-charcoal">
                   Elite Brain Health Coach Certified — Amen University (January 2026)
                 </p>

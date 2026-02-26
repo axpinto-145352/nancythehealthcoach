@@ -13,6 +13,9 @@ const urls = [
   { loc: '/', priority: '1.0', changefreq: 'weekly', lastmod: today },
   { loc: '/blog', priority: '0.8', changefreq: 'weekly', lastmod: today },
   { loc: '/starter-kit', priority: '0.7', changefreq: 'monthly', lastmod: today },
+  { loc: '/privacy-policy', priority: '0.3', changefreq: 'yearly', lastmod: today },
+  { loc: '/terms', priority: '0.3', changefreq: 'yearly', lastmod: today },
+  { loc: '/disclaimers', priority: '0.3', changefreq: 'yearly', lastmod: today },
   ...slugs.map(slug => ({
     loc: `/blog/${slug}`,
     priority: '0.9',

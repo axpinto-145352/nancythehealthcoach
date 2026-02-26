@@ -60,7 +60,7 @@ const FAQ = () => {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full flex items-center justify-between p-5 text-left hover:bg-nancy-sage/30 transition-colors"
+                className="w-full flex items-center justify-between p-4 sm:p-5 text-left hover:bg-nancy-sage/30 transition-colors"
               >
                 <span className="font-semibold text-nancy-charcoal pr-4">{faq.q}</span>
                 <ChevronDown
@@ -70,7 +70,7 @@ const FAQ = () => {
                 />
               </button>
               {openIndex === i && (
-                <div className="px-5 pb-5 animate-fadeIn">
+                <div className="px-4 pb-4 sm:px-5 sm:pb-5 animate-fadeIn">
                   <p className="text-nancy-gray leading-relaxed">{faq.a}</p>
                 </div>
               )}

@@ -134,7 +134,7 @@ const BlogPost = ({ slug, onNavigate }: BlogPostProps) => {
       }} />
 
       {/* Article Header */}
-      <div className="bg-nancy-charcoal pt-28 pb-12 px-4 sm:px-6 lg:px-8">
+      <div className="bg-nancy-charcoal pt-24 pb-8 sm:pt-28 sm:pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <button
             onClick={() => onNavigate('blog')}
@@ -155,17 +155,17 @@ const BlogPost = ({ slug, onNavigate }: BlogPostProps) => {
             </span>
           </div>
 
-          <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+          <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
             {post.title}
           </h1>
 
-          <div className="flex items-center space-x-4 text-sm text-gray-400">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-400">
             <span className="flex items-center">
-              <User className="h-4 w-4 mr-1.5" />
+              <User className="h-4 w-4 mr-1.5 flex-shrink-0" />
               {post.author}, {post.authorCredentials.split(',')[0]}
             </span>
             <span className="flex items-center">
-              <Calendar className="h-4 w-4 mr-1.5" />
+              <Calendar className="h-4 w-4 mr-1.5 flex-shrink-0" />
               {new Date(post.publishDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
             </span>
           </div>
@@ -173,7 +173,7 @@ const BlogPost = ({ slug, onNavigate }: BlogPostProps) => {
       </div>
 
       {/* Article Content */}
-      <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Excerpt callout */}
         <div className="bg-nancy-sage rounded-xl p-6 mb-10 border-l-4 border-nancy-teal">
           <p className="text-nancy-charcoal font-medium italic text-lg leading-relaxed">
@@ -187,7 +187,7 @@ const BlogPost = ({ slug, onNavigate }: BlogPostProps) => {
         </div>
 
         {/* CTA Box */}
-        <div className="mt-12 bg-gradient-to-br from-nancy-teal to-nancy-teal-light rounded-2xl p-8 text-center text-white">
+        <div className="mt-10 sm:mt-12 bg-gradient-to-br from-nancy-teal to-nancy-teal-light rounded-2xl p-5 sm:p-8 text-center text-white">
           <h3 className="font-display text-2xl font-bold mb-3">
             Ready to Transform Your Brain Health?
           </h3>
@@ -206,11 +206,11 @@ const BlogPost = ({ slug, onNavigate }: BlogPostProps) => {
         </div>
 
         {/* Author Bio */}
-        <div className="mt-12 bg-white rounded-2xl p-6 flex items-start space-x-4">
+        <div className="mt-10 sm:mt-12 bg-white rounded-2xl p-4 sm:p-6 flex items-start space-x-3 sm:space-x-4">
           <img
             src={`${import.meta.env.BASE_URL}nancy-headshot-update.png`}
             alt="Nancy Ryan"
-            className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+            className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover flex-shrink-0"
           />
           <div>
             <h4 className="font-display font-bold text-nancy-charcoal">Nancy Ryan, EBHCC</h4>
@@ -230,7 +230,7 @@ const BlogPost = ({ slug, onNavigate }: BlogPostProps) => {
             <h2 className="font-display text-2xl md:text-3xl font-bold text-nancy-charcoal mb-8 text-center">
               Keep Reading
             </h2>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
               {relatedPosts.map((related) => (
                 <article
                   key={related.slug}
