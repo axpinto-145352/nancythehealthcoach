@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Download, CheckCircle, BookOpen, Loader2 } from 'lucide-react';
 
-const KIT_FORM_ID = import.meta.env.VITE_KIT_FORM_ID || '';
+const KIT_FORM_ID = import.meta.env.VITE_KIT_FORM_ID || '9139065';
 const KIT_API_KEY = import.meta.env.VITE_KIT_API_KEY || 'W6yL0_TFEtMcaYILuvUUEQ';
 
 interface LeadCaptureProps {

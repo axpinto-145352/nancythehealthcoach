@@ -18,7 +18,7 @@ import {
 } from 'lucide-react';
 import TermsCallout from './TermsCallout';
 
-const KIT_FORM_ID = import.meta.env.VITE_KIT_FORM_ID || '';
+const KIT_FORM_ID = import.meta.env.VITE_KIT_FORM_ID || '9139065';
 const KIT_API_KEY = import.meta.env.VITE_KIT_API_KEY || 'W6yL0_TFEtMcaYILuvUUEQ';
 
 interface StarterKitProps {
