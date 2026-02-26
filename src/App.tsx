@@ -20,6 +20,7 @@ import StarterKit from './components/StarterKit';
 import Disclaimers from './components/Disclaimers';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsConditions from './components/TermsConditions';
+import TermsGate from './components/TermsGate';
 import { JsonLd } from './components/JsonLd';
 
 type Route =
@@ -89,103 +90,112 @@ function App() {
     }
   };
 
-  if (route.page === 'blog-page') {
-    return (
-      <div className="min-h-screen">
-        <Navbar onNavigate={navigate} />
-        <BlogPage onNavigate={navigate} />
-        <Footer onNavigate={navigate} />
-      </div>
-    );
-  }
+  const renderPage = () => {
+    if (route.page === 'blog-page') {
+      return (
+        <div className="min-h-screen">
+          <Navbar onNavigate={navigate} />
+          <BlogPage onNavigate={navigate} />
+          <Footer onNavigate={navigate} />
+        </div>
+      );
+    }
 
-  if (route.page === 'blog-post') {
-    return (
-      <div className="min-h-screen">
-        <Navbar onNavigate={navigate} />
-        <BlogPost slug={route.slug} onNavigate={navigate} />
-        <Footer onNavigate={navigate} />
-      </div>
-    );
-  }
+    if (route.page === 'blog-post') {
+      return (
+        <div className="min-h-screen">
+          <Navbar onNavigate={navigate} />
+          <BlogPost slug={route.slug} onNavigate={navigate} />
+          <Footer onNavigate={navigate} />
+        </div>
+      );
+    }
 
-  if (route.page === 'starter-kit') {
-    return (
-      <div className="min-h-screen">
-        <Navbar onNavigate={navigate} />
-        <StarterKit onNavigate={navigate} />
-        <Footer onNavigate={navigate} />
-      </div>
-    );
-  }
+    if (route.page === 'starter-kit') {
+      return (
+        <div className="min-h-screen">
+          <Navbar onNavigate={navigate} />
+          <StarterKit onNavigate={navigate} />
+          <Footer onNavigate={navigate} />
+        </div>
+      );
+    }
 
-  if (route.page === 'disclaimers') {
-    return (
-      <div className="min-h-screen">
-        <Navbar onNavigate={navigate} />
-        <Disclaimers onNavigate={navigate} />
-        <Footer onNavigate={navigate} />
-      </div>
-    );
-  }
+    if (route.page === 'disclaimers') {
+      return (
+        <div className="min-h-screen">
+          <Navbar onNavigate={navigate} />
+          <Disclaimers onNavigate={navigate} />
+          <Footer onNavigate={navigate} />
+        </div>
+      );
+    }
 
-  if (route.page === 'privacy-policy') {
-    return (
-      <div className="min-h-screen">
-        <Navbar onNavigate={navigate} />
-        <PrivacyPolicy onNavigate={navigate} />
-        <Footer onNavigate={navigate} />
-      </div>
-    );
-  }
+    if (route.page === 'privacy-policy') {
+      return (
+        <div className="min-h-screen">
+          <Navbar onNavigate={navigate} />
+          <PrivacyPolicy onNavigate={navigate} />
+          <Footer onNavigate={navigate} />
+        </div>
+      );
+    }
 
-  if (route.page === 'terms') {
+    if (route.page === 'terms') {
+      return (
+        <div className="min-h-screen">
+          <Navbar onNavigate={navigate} />
+          <TermsConditions onNavigate={navigate} />
+          <Footer onNavigate={navigate} />
+        </div>
+      );
+    }
+
     return (
-      <div className="min-h-screen">
+      <div className="min-h-screen pb-[72px] md:pb-0">
         <Navbar onNavigate={navigate} />
-        <TermsConditions onNavigate={navigate} />
+        <Hero />
+        <SocialProofBar />
+        <AboutPreview />
+        <ProblemSection />
+        <HowItWorks />
+        <QuizSection />
+        <Services />
+        <Testimonials />
+        <LeadCapture onNavigate={navigate} />
+        <BlogPreview onNavigate={navigate} />
+        <FAQ />
+        <FinalCTA />
         <Footer onNavigate={navigate} />
+        <StickyCTA />
+        <JsonLd data={{
+          '@context': 'https://schema.org',
+          '@type': 'HealthBusiness',
+          name: 'Nancy The Health Coach',
+          description: 'Brain health coaching for busy professionals. Helping you reclaim focus, energy, and clarity through science-backed nutrition strategies.',
+          url: window.location.origin + BASE,
+          founder: {
+            '@type': 'Person',
+            name: 'Nancy Ryan, EBHCC',
+            jobTitle: 'Elite Brain Health Coach Certified - Amen University',
+          },
+          areaServed: { '@type': 'Country', name: 'United States' },
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'San Diego',
+            addressRegion: 'CA',
+            addressCountry: 'US',
+          },
+        }} />
       </div>
     );
-  }
+  };
 
   return (
-    <div className="min-h-screen pb-[72px] md:pb-0">
-      <Navbar onNavigate={navigate} />
-      <Hero />
-      <SocialProofBar />
-      <AboutPreview />
-      <ProblemSection />
-      <HowItWorks />
-      <QuizSection />
-      <Services />
-      <Testimonials />
-      <LeadCapture onNavigate={navigate} />
-      <BlogPreview onNavigate={navigate} />
-      <FAQ />
-      <FinalCTA />
-      <Footer onNavigate={navigate} />
-      <StickyCTA />
-      <JsonLd data={{
-        '@context': 'https://schema.org',
-        '@type': 'HealthBusiness',
-        name: 'Nancy The Health Coach',
-        description: 'Brain health coaching for busy professionals. Helping you reclaim focus, energy, and clarity through science-backed nutrition strategies.',
-        url: window.location.origin + BASE,
-        founder: {
-          '@type': 'Person',
-          name: 'Nancy Ryan, EBHCC',
-          jobTitle: 'Elite Brain Health Coach Certified - Amen University',
-        },
-        areaServed: { '@type': 'Country', name: 'United States' },
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'San Diego',
-          addressRegion: 'CA',
-          addressCountry: 'US',
-        },
-      }} />
-    </div>
+    <>
+      {renderPage()}
+      <TermsGate onNavigate={navigate} />
+    </>
   );
 }
 
