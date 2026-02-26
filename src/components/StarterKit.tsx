@@ -14,7 +14,11 @@ import {
   Clock,
   Lightbulb,
   Leaf,
+  Loader2,
 } from 'lucide-react';
+
+const KIT_FORM_ID = import.meta.env.VITE_KIT_FORM_ID || '';
+const KIT_API_KEY = import.meta.env.VITE_KIT_API_KEY || 'W6yL0_TFEtMcaYILuvUUEQ';
 
 interface StarterKitProps {
   onNavigate: (target: string) => void;
@@ -23,11 +27,32 @@ interface StarterKitProps {
 const StarterKit = ({ onNavigate }: StarterKitProps) => {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
+    if (!email) return;
+    setSubmitting(true);
+    setError('');
+
+    try {
+      if (KIT_FORM_ID) {
+        const res = await fetch(
+          `https://api.convertkit.com/v3/forms/${KIT_FORM_ID}/subscribe`,
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ api_key: KIT_API_KEY, email }),
+          }
+        );
+        if (!res.ok) throw new Error('Subscription failed');
+      }
       setSubmitted(true);
+    } catch {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -417,7 +442,7 @@ const StarterKit = ({ onNavigate }: StarterKitProps) => {
               <CheckCircle className="h-16 w-16 text-white mx-auto mb-4" />
               <h3 className="font-display text-2xl font-bold mb-2">Your Starter Kit Is on Its Way!</h3>
               <p className="text-white/90 max-w-md mx-auto">
-                Check your inbox for the downloadable PDF version. (This is a demo — no email was sent.)
+                Check your inbox for the downloadable PDF version of the 7-Day Brain Health Starter Kit.
               </p>
             </div>
           ) : (
@@ -437,11 +462,12 @@ const StarterKit = ({ onNavigate }: StarterKitProps) => {
                   required
                   className="flex-1 px-5 py-3.5 rounded-xl border-2 border-white/30 bg-white/10 text-white placeholder:text-white/60 focus:border-white focus:ring-2 focus:ring-white/20 focus:outline-none"
                 />
-                <button type="submit" className="bg-white text-nancy-teal px-6 py-3.5 rounded-xl font-semibold hover:bg-nancy-cream transition-colors flex items-center justify-center space-x-2 whitespace-nowrap">
-                  <Download className="h-4 w-4" />
-                  <span>Send It to Me</span>
+                <button type="submit" disabled={submitting} className="bg-white text-nancy-teal px-6 py-3.5 rounded-xl font-semibold hover:bg-nancy-cream transition-colors flex items-center justify-center space-x-2 whitespace-nowrap disabled:opacity-60">
+                  {submitting ? <Loader2 className="h-4 w-4 animate-spin" /> : <Download className="h-4 w-4" />}
+                  <span>{submitting ? 'Sending...' : 'Send It to Me'}</span>
                 </button>
               </form>
+              {error && <p className="text-red-300 text-xs mt-2">{error}</p>}
               <p className="text-xs text-white/60 mt-3">
                 No spam, ever. Just brain health insights from Nancy. Unsubscribe anytime.
               </p>

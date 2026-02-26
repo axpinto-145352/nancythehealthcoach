@@ -243,4 +243,42 @@ const starterKitHtml = injectNoscript(BASE_HTML, starterKitNoscript, {
 writeRoute('/starter-kit', starterKitHtml);
 console.log('Pre-rendered: /starter-kit');
 
-console.log(`\nPre-rendering complete! ${3 + posts.length} pages generated.`);
+// ── Privacy Policy page ──
+const privacyNoscript = `
+<main>
+  <h1>Privacy Policy — Nancy The Health Coach</h1>
+  <p>This Privacy Policy describes how Nancy Ryan / Nancy The Health Coach collects, uses, and shares information about you when you use our website at nancythehealthcoach.com.</p>
+  <h2>Information We Collect</h2>
+  <p>We collect email addresses when you subscribe, and usage data through Google Analytics.</p>
+  <h2>Email Marketing</h2>
+  <p>We use Kit (formerly ConvertKit) to manage our email list. You can unsubscribe at any time.</p>
+  <h2>Contact</h2>
+  <p>Email: nancythehealthcoach@gmail.com</p>
+</main>`;
+
+const privacyHtml = injectNoscript(BASE_HTML, privacyNoscript, {
+  title: 'Privacy Policy — Nancy The Health Coach',
+  description: 'Privacy policy for nancythehealthcoach.com — how we collect, use, and protect your information.',
+});
+writeRoute('/privacy-policy', privacyHtml);
+console.log('Pre-rendered: /privacy-policy');
+
+// ── Terms & Conditions page ──
+const termsNoscript = `
+<main>
+  <h1>Terms &amp; Conditions — Nancy The Health Coach</h1>
+  <p>By accessing or using nancythehealthcoach.com, you agree to be bound by these Terms &amp; Conditions.</p>
+  <h2>Services</h2>
+  <p>Nancy The Health Coach offers brain health coaching services, educational content, workshops, and digital products.</p>
+  <h2>Contact</h2>
+  <p>Email: nancythehealthcoach@gmail.com</p>
+</main>`;
+
+const termsHtml = injectNoscript(BASE_HTML, termsNoscript, {
+  title: 'Terms & Conditions — Nancy The Health Coach',
+  description: 'Terms and conditions for using nancythehealthcoach.com and purchasing coaching services.',
+});
+writeRoute('/terms', termsHtml);
+console.log('Pre-rendered: /terms');
+
+console.log(`\nPre-rendering complete! ${5 + posts.length} pages generated.`);

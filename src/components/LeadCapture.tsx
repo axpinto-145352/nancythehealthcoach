@@ -1,5 +1,8 @@
 import { useState } from 'react';
-import { Download, CheckCircle, BookOpen } from 'lucide-react';
+import { Download, CheckCircle, BookOpen, Loader2 } from 'lucide-react';
+
+const KIT_FORM_ID = import.meta.env.VITE_KIT_FORM_ID || '';
+const KIT_API_KEY = import.meta.env.VITE_KIT_API_KEY || 'W6yL0_TFEtMcaYILuvUUEQ';
 
 interface LeadCaptureProps {
   onNavigate?: (hash: string) => void;
@@ -8,11 +11,32 @@ interface LeadCaptureProps {
 const LeadCapture = ({ onNavigate }: LeadCaptureProps) => {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
+    if (!email) return;
+    setSubmitting(true);
+    setError('');
+
+    try {
+      if (KIT_FORM_ID) {
+        const res = await fetch(
+          `https://api.convertkit.com/v3/forms/${KIT_FORM_ID}/subscribe`,
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ api_key: KIT_API_KEY, email }),
+          }
+        );
+        if (!res.ok) throw new Error('Subscription failed');
+      }
       setSubmitted(true);
+    } catch {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -78,7 +102,7 @@ const LeadCapture = ({ onNavigate }: LeadCaptureProps) => {
                   Check your inbox!
                 </h3>
                 <p className="text-nancy-gray text-sm">
-                  Your Brain Health Starter Kit is on its way. (This is a demo — no email was sent.)
+                  Your Brain Health Starter Kit is on its way.
                 </p>
               </div>
             ) : (
@@ -91,12 +115,13 @@ const LeadCapture = ({ onNavigate }: LeadCaptureProps) => {
                   required
                   className="flex-1 px-5 py-3.5 rounded-xl border-2 border-nancy-sage-dark focus:border-nancy-teal focus:ring-2 focus:ring-nancy-teal/20 focus:outline-none bg-white text-nancy-charcoal placeholder:text-nancy-gray-light"
                 />
-                <button type="submit" className="btn-primary flex items-center justify-center space-x-2 whitespace-nowrap">
-                  <Download className="h-4 w-4" />
-                  <span>Send It to Me</span>
+                <button type="submit" disabled={submitting} className="btn-primary flex items-center justify-center space-x-2 whitespace-nowrap disabled:opacity-60">
+                  {submitting ? <Loader2 className="h-4 w-4 animate-spin" /> : <Download className="h-4 w-4" />}
+                  <span>{submitting ? 'Sending...' : 'Send It to Me'}</span>
                 </button>
               </form>
             )}
+            {error && <p className="text-red-600 text-xs mt-2">{error}</p>}
 
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-3 gap-1 sm:gap-0">
               <p className="text-xs text-nancy-gray-light">
