@@ -281,4 +281,24 @@ const termsHtml = injectNoscript(BASE_HTML, termsNoscript, {
 writeRoute('/terms', termsHtml);
 console.log('Pre-rendered: /terms');
 
-console.log(`\nPre-rendering complete! ${5 + posts.length} pages generated.`);
+// ── Disclaimers page ──
+const disclaimersNoscript = `
+<main>
+  <h1>Disclaimers — Nancy The Health Coach</h1>
+  <p>The information provided by Nancy Ryan / Nancy The Health Coach is for educational and informational purposes only. It is not intended as medical advice, diagnosis, or treatment.</p>
+  <h2>Not Medical Advice</h2>
+  <p>Nancy Ryan is a certified health coach, not a licensed medical provider. Always consult your physician or qualified healthcare provider before making changes to your diet, exercise, or health regimen.</p>
+  <h2>No Guarantees</h2>
+  <p>Results vary. No specific outcomes are guaranteed from coaching services, programs, or digital products.</p>
+  <h2>Contact</h2>
+  <p>Email: nancythehealthcoach@gmail.com</p>
+</main>`;
+
+const disclaimersHtml = injectNoscript(BASE_HTML, disclaimersNoscript, {
+  title: 'Disclaimers — Nancy The Health Coach',
+  description: 'Disclaimers for nancythehealthcoach.com — important information about the educational nature of our content and services.',
+});
+writeRoute('/disclaimers', disclaimersHtml);
+console.log('Pre-rendered: /disclaimers');
+
+console.log(`\nPre-rendering complete! ${6 + posts.length} pages generated.`);
