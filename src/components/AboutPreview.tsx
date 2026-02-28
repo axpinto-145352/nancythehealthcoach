@@ -31,10 +31,10 @@ const AboutPreview = () => {
                 loading="lazy"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-nancy-charcoal to-nancy-charcoal/90 p-4 sm:p-5 md:p-6 text-center">
-                <p className="font-display text-white text-base sm:text-base md:text-lg italic">
+                <p className="font-display text-white text-base md:text-lg italic">
                   "She's the reason I do this work. My daughter taught me that every brain is different — and every brain deserves support."
                 </p>
-                <p className="text-nancy-gold text-sm sm:text-sm mt-1 sm:mt-2">— Nancy Ryan</p>
+                <p className="text-nancy-gold text-sm mt-1 sm:mt-2">— Nancy Ryan</p>
               </div>
             </div>
           </div>
