@@ -46,25 +46,25 @@ const AboutPreview = () => {
               <span className="gradient-text">Because I Had No Choice</span>
             </h2>
 
-            <p className="text-nancy-gray leading-relaxed mb-4">
+            <p className="text-nancy-gray text-[0.9375rem] sm:text-base leading-relaxed mb-4">
               When my daughter was diagnosed with high-functioning autism at three years old, I
               did what any mom would do — I started researching everything. I needed to understand
               how her brain worked so I could help her thrive.
             </p>
 
-            <p className="text-nancy-gray leading-relaxed mb-4">
+            <p className="text-nancy-gray text-[0.9375rem] sm:text-base leading-relaxed mb-4">
               That research changed my life. I discovered the connection between nutrition and
               brain function. I started changing what our family ate, and I watched my daughter
               flourish.
             </p>
 
-            <p className="text-nancy-gray leading-relaxed mb-4">
+            <p className="text-nancy-gray text-[0.9375rem] sm:text-base leading-relaxed mb-4">
               Then I turned the lens on myself. I'd been living with anxiety and gut issues for
               years. When I changed my nutrition, my anxiety lifted. My focus sharpened. I felt
               like myself for the first time in years.
             </p>
 
-            <p className="text-nancy-gray leading-relaxed mb-6">
+            <p className="text-nancy-gray text-[0.9375rem] sm:text-base leading-relaxed mb-6">
               Then my mother was diagnosed with Alzheimer's. Watching her memory fade turned this
               work from a passion into a mission.
             </p>

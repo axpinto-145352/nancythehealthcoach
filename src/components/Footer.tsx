@@ -49,7 +49,7 @@ const Footer = ({ onNavigate }: FooterProps) => {
           {/* Quick Links */}
           <div>
             <h4 className="font-semibold text-nancy-gold mb-4">Quick Links</h4>
-            <ul className="space-y-2.5 text-gray-400 text-sm">
+            <ul className="space-y-3 text-gray-400 text-sm sm:text-sm">
               <li><a href={import.meta.env.BASE_URL} onClick={(e) => handleNavClick(e, '')} className="hover:text-nancy-teal transition-colors">Home</a></li>
               <li><a href="#about" className="hover:text-nancy-teal transition-colors">About Nancy</a></li>
               <li><a href="#services" className="hover:text-nancy-teal transition-colors">Services & Pricing</a></li>
@@ -88,7 +88,7 @@ const Footer = ({ onNavigate }: FooterProps) => {
           {/* Contact */}
           <div>
             <h4 className="font-semibold text-nancy-gold mb-4">Get In Touch</h4>
-            <div className="space-y-3 text-gray-400 text-sm mb-6">
+            <div className="space-y-3 text-gray-300 text-sm sm:text-sm mb-6">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-nancy-teal" />
                 <span>nancythehealthcoach@gmail.com</span>

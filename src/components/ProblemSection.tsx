@@ -36,7 +36,7 @@ const ProblemSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-10 sm:mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 sm:mb-12">
           {painPoints.map((point, i) => (
             <div
               key={i}
@@ -46,7 +46,7 @@ const ProblemSection = () => {
                 <point.icon className="h-7 w-7 text-nancy-coral" />
               </div>
               <h3 className="font-display font-bold text-nancy-charcoal mb-2">{point.title}</h3>
-              <p className="text-sm text-nancy-gray">{point.description}</p>
+              <p className="text-sm sm:text-base text-nancy-gray">{point.description}</p>
             </div>
           ))}
         </div>

@@ -40,7 +40,7 @@ const HowItWorks = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 lg:gap-8">
           {steps.map((step, i) => (
             <div key={i} className="relative text-center">
               {/* Connector line */}
@@ -58,7 +58,7 @@ const HowItWorks = () => {
               <h3 className="font-display text-lg font-bold text-nancy-charcoal mb-2">
                 {step.title}
               </h3>
-              <p className="text-sm text-nancy-gray leading-relaxed">
+              <p className="text-sm sm:text-base text-nancy-gray leading-relaxed">
                 {step.description}
               </p>
             </div>
