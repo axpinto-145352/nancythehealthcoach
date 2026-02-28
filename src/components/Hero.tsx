@@ -54,12 +54,12 @@ const Hero = () => {
           </div>
 
           {/* Mobile: Photo */}
-          <div className="relative lg:hidden mx-auto max-w-sm">
-            <div className="bg-nancy-sage rounded-3xl aspect-[3/4] relative overflow-hidden">
+          <div className="relative lg:hidden mx-auto max-w-xs">
+            <div className="bg-nancy-sage rounded-3xl aspect-[3/4] sm:aspect-[3/4] relative overflow-hidden">
               <img
                 src={`${import.meta.env.BASE_URL}nancy-headshot-update.png`}
                 alt="Nancy Ryan — Brain Health Coach"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-nancy-teal/10 to-transparent h-32" />
             </div>

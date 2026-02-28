@@ -43,10 +43,10 @@ const LeadCapture = ({ onNavigate }: LeadCaptureProps) => {
   return (
     <section className="section-padding bg-nancy-sage">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Mock PDF preview */}
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Mock PDF preview — shown second on mobile */}
           <div
-            className="relative mx-auto lg:mx-0 cursor-pointer"
+            className="relative mx-auto lg:mx-0 cursor-pointer order-2 lg:order-1"
             onClick={() => onNavigate?.('starter-kit')}
           >
             <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-[288px] transform rotate-[-3deg] hover:rotate-0 transition-transform duration-500">
@@ -73,8 +73,8 @@ const LeadCapture = ({ onNavigate }: LeadCaptureProps) => {
             </div>
           </div>
 
-          {/* Content */}
-          <div>
+          {/* Content — shown first on mobile */}
+          <div className="order-1 lg:order-2">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-nancy-charcoal mb-4">
               Free: 7-Day Brain Health Starter Kit
             </h2>
