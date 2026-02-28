@@ -25,11 +25,15 @@ const Hero = () => {
 
             <p className="text-[1.0625rem] sm:text-lg md:text-xl text-nancy-charcoal leading-relaxed mb-4">
               Whether you're struggling with brain fog, sugar cravings, or worried about
-              cognitive decline — I've been where you are. As the mom of a high-functioning autistic adult, a daughter, and a brain health coach, I've seen firsthand how the right support — from nutrition and lifestyle shifts to mindset and daily habits — can transform focus, energy, and overall well-being. I don't just teach this work. I've lived it.
+              cognitive decline — I've been where you are. I don't just teach this work. I've lived it.
+            </p>
+
+            <p className="hidden sm:block text-[1.0625rem] sm:text-lg text-nancy-charcoal leading-relaxed mb-4">
+              As the mom of a high-functioning autistic adult, a daughter, and a brain health coach, I've seen firsthand how the right support — from nutrition and lifestyle shifts to mindset and daily habits — can transform focus, energy, and overall well-being.
             </p>
 
             <p className="text-[1.0625rem] sm:text-lg text-nancy-charcoal leading-relaxed mb-6 sm:mb-8">
-              I'm Elite Brain Health Coach Certified through Amen University helping you take control of your brain health.
+              Elite Brain Health Coach Certified through Amen University — helping you take control of your brain health.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -55,7 +59,7 @@ const Hero = () => {
 
           {/* Mobile: Photo */}
           <div className="relative lg:hidden mx-auto max-w-xs">
-            <div className="bg-nancy-sage rounded-3xl aspect-[3/4] sm:aspect-[3/4] relative overflow-hidden">
+            <div className="bg-nancy-sage rounded-3xl aspect-[3/4] relative overflow-hidden">
               <img
                 src={`${import.meta.env.BASE_URL}nancy-headshot-update.png`}
                 alt="Nancy Ryan — Brain Health Coach"
