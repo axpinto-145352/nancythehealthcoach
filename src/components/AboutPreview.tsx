@@ -5,13 +5,14 @@ const AboutPreview = () => {
     <section id="about" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Photos */}
-          <div className="relative space-y-4 sm:space-y-6">
-            <div className="bg-nancy-sage rounded-3xl aspect-[4/5] relative overflow-hidden">
+          {/* Photos — shown second on mobile, first on desktop */}
+          <div className="relative space-y-4 sm:space-y-6 order-2 lg:order-1">
+            {/* Mom photo — landscape on mobile, portrait on desktop */}
+            <div className="bg-nancy-sage rounded-3xl aspect-[4/3] sm:aspect-[4/5] relative overflow-hidden">
               <img
                 src={`${import.meta.env.BASE_URL}nancy-mom-2.png`}
                 alt="Nancy Ryan with her mother"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
                 loading="lazy"
               />
               {/* Decorative quote overlay */}
@@ -23,7 +24,8 @@ const AboutPreview = () => {
               </div>
             </div>
 
-            <div className="bg-nancy-sage rounded-3xl aspect-[3/4] lg:aspect-[4/3] relative overflow-hidden">
+            {/* Daughter photo — landscape on mobile, landscape on desktop */}
+            <div className="bg-nancy-sage rounded-3xl aspect-[4/3] relative overflow-hidden">
               <img
                 src={`${import.meta.env.BASE_URL}nancy-daughter.png`}
                 alt="Nancy's daughter"
@@ -39,9 +41,9 @@ const AboutPreview = () => {
             </div>
           </div>
 
-          {/* Content */}
-          <div>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-nancy-charcoal mb-6">
+          {/* Content — shown first on mobile, second on desktop */}
+          <div className="order-1 lg:order-2">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-nancy-charcoal mb-6">
               I Became a Brain Health Coach{' '}
               <span className="gradient-text">Because I Had No Choice</span>
             </h2>

@@ -49,16 +49,24 @@ const StickyCTA = () => {
 
       {/* Mobile: sticky bottom bar */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 px-3 pt-2 safe-bottom">
-        <a
-          href="https://calendly.com/nancythehealthcoach-1/15min"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-primary w-full flex items-center justify-center space-x-2 py-3"
-        >
-          <Calendar className="h-4 w-4" />
-          <span>Book Free Consultation</span>
-        </a>
-        <TermsCallout className="text-center pb-1" />
+        <div className="flex items-center gap-2">
+          <a
+            href="https://calendly.com/nancythehealthcoach-1/15min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary flex-1 flex items-center justify-center space-x-2 py-3"
+          >
+            <Calendar className="h-4 w-4" />
+            <span>Book Free Consultation</span>
+          </a>
+          <button
+            onClick={() => setDismissed(true)}
+            className="flex-shrink-0 p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-gray-400 hover:text-gray-600"
+            aria-label="Dismiss"
+          >
+            <X className="h-5 w-5" />
+          </button>
+        </div>
       </div>
     </>
   );

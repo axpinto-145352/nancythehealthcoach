@@ -109,7 +109,7 @@ const Navbar = ({ onNavigate }: NavbarProps) => {
                   handleClick(e, link.href);
                   setIsOpen(false);
                 }}
-                className="block text-nancy-charcoal hover:text-nancy-teal font-medium py-2"
+                className="block text-nancy-charcoal hover:text-nancy-teal font-medium py-3"
               >
                 {link.label}
               </a>

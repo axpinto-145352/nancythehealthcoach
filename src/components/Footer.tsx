@@ -33,14 +33,14 @@ const Footer = ({ onNavigate }: FooterProps) => {
             <p className="text-gray-400 text-sm mb-4">
               San Diego, CA &mdash; Virtual sessions available nationwide
             </p>
-            <div className="flex space-x-4">
-              <a href="https://www.facebook.com/NancyJoHealthCoach" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-nancy-teal transition-colors">
+            <div className="flex space-x-2">
+              <a href="https://www.facebook.com/NancyJoHealthCoach" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-nancy-teal transition-colors p-2">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="https://www.instagram.com/nancythehealthcoach/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-nancy-teal transition-colors">
+              <a href="https://www.instagram.com/nancythehealthcoach/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-nancy-teal transition-colors p-2">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="https://www.linkedin.com/in/nancy-jo-ryan-62b5625/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-nancy-teal transition-colors">
+              <a href="https://www.linkedin.com/in/nancy-jo-ryan-62b5625/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-nancy-teal transition-colors p-2">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
@@ -49,7 +49,7 @@ const Footer = ({ onNavigate }: FooterProps) => {
           {/* Quick Links */}
           <div>
             <h4 className="font-semibold text-nancy-gold mb-4">Quick Links</h4>
-            <ul className="space-y-3 text-gray-400 text-sm">
+            <ul className="text-gray-400 text-sm [&_a]:block [&_a]:py-2">
               <li><a href={import.meta.env.BASE_URL} onClick={(e) => handleNavClick(e, '')} className="hover:text-nancy-teal transition-colors">Home</a></li>
               <li><a href="#about" className="hover:text-nancy-teal transition-colors">About Nancy</a></li>
               <li><a href="#services" className="hover:text-nancy-teal transition-colors">Services & Pricing</a></li>
