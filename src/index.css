@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply font-body text-nancy-charcoal bg-nancy-cream;
+    @apply font-body text-nancy-charcoal bg-nancy-cream leading-relaxed;
   }
 }
 
@@ -31,7 +31,7 @@
     padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
   }
   .section-padding {
-    @apply py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8;
+    @apply py-12 sm:py-16 md:py-24 px-5 sm:px-6 lg:px-8;
   }
   .card-hover {
     @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;

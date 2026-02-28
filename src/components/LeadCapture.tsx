@@ -88,7 +88,7 @@ const LeadCapture = ({ onNavigate }: LeadCaptureProps) => {
                 'Printable shopping list with everything you need',
                 'Sugar swaps for your favorite sugary foods',
               ].map((item, i) => (
-                <li key={i} className="flex items-center text-sm text-nancy-charcoal">
+                <li key={i} className="flex items-center text-sm sm:text-base text-nancy-charcoal">
                   <CheckCircle className="h-4 w-4 text-nancy-teal mr-2 flex-shrink-0" />
                   {item}
                 </li>

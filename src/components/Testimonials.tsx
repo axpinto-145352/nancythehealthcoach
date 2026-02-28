@@ -32,7 +32,7 @@ const Testimonials = () => {
           <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
             What Happens When You Invest in Your Brain
           </h2>
-          <p className="text-lg text-gray-400">
+          <p className="text-lg text-gray-300">
             Real people. Real workshops. Real results.
           </p>
         </div>

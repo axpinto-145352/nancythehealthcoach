@@ -1,6 +1,6 @@
 const QuizSection = () => {
   return (
-    <section id="quiz" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-nancy-cream">
+    <section id="quiz" className="py-12 sm:py-16 md:py-24 px-5 sm:px-6 lg:px-8 bg-nancy-cream">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-nancy-charcoal mb-4 leading-tight">
