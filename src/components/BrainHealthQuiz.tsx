@@ -255,10 +255,13 @@ const BrainHealthQuiz = () => {
                 <Calendar className="h-4 w-4" />
                 <span>Book Free 15-Min Call</span>
               </a>
-              <button className="btn-secondary flex-1 flex items-center justify-center space-x-2">
+              <a
+                href={`${import.meta.env.BASE_URL}starter-kit`}
+                className="btn-secondary flex-1 flex items-center justify-center space-x-2"
+              >
                 <Download className="h-4 w-4" />
                 <span>Get Sugar Detox Guide</span>
-              </button>
+              </a>
             </div>
             <TermsCallout className="text-center" />
 

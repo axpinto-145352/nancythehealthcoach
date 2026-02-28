@@ -50,7 +50,7 @@ const Footer = ({ onNavigate }: FooterProps) => {
           <div>
             <h4 className="font-semibold text-nancy-gold mb-4">Quick Links</h4>
             <ul className="space-y-2.5 text-gray-400 text-sm">
-              <li><a href="#" className="hover:text-nancy-teal transition-colors">Home</a></li>
+              <li><a href={import.meta.env.BASE_URL} onClick={(e) => handleNavClick(e, '')} className="hover:text-nancy-teal transition-colors">Home</a></li>
               <li><a href="#about" className="hover:text-nancy-teal transition-colors">About Nancy</a></li>
               <li><a href="#services" className="hover:text-nancy-teal transition-colors">Services & Pricing</a></li>
               <li><a href="#testimonials" className="hover:text-nancy-teal transition-colors">Testimonials</a></li>
