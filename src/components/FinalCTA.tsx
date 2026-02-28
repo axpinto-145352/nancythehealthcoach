@@ -14,12 +14,12 @@ const FinalCTA = () => {
           Ready to Give Your Brain What It Needs?
         </h2>
 
-        <p className="text-lg md:text-xl text-white/80 mb-4 leading-relaxed">
+        <p className="text-lg md:text-xl text-white/90 mb-4 leading-relaxed">
           Every journey starts with a conversation. Book a free 15-minute consultation and let's
           talk about what's going on with your brain, your energy, and your focus.
         </p>
 
-        <p className="text-white/70 mb-8 italic font-display">
+        <p className="text-white/85 mb-8 italic font-display">
           No pressure, no sales pitch — just honest guidance from someone who's been there.
         </p>
 

@@ -18,8 +18,8 @@ export default {
           'sage-dark': '#C5D9C5',
           cream: '#FAF8F5',
           charcoal: '#2D2D2D',
-          'gray': '#6B7280',
-          'gray-light': '#9CA3AF',
+          'gray': '#4B5563',
+          'gray-light': '#6B7280',
         }
       },
       fontFamily: {

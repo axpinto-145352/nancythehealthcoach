@@ -15,7 +15,7 @@ const Footer = ({ onNavigate }: FooterProps) => {
   };
 
   return (
-    <footer className="bg-nancy-charcoal text-white pt-10 sm:pt-16 pb-8">
+    <footer className="bg-nancy-charcoal text-white pt-10 sm:pt-16 pb-24 md:pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {/* Brand */}
@@ -49,7 +49,7 @@ const Footer = ({ onNavigate }: FooterProps) => {
           {/* Quick Links */}
           <div>
             <h4 className="font-semibold text-nancy-gold mb-4">Quick Links</h4>
-            <ul className="space-y-2.5 text-gray-400 text-sm">
+            <ul className="space-y-3 text-gray-400 text-sm">
               <li><a href={import.meta.env.BASE_URL} onClick={(e) => handleNavClick(e, '')} className="hover:text-nancy-teal transition-colors">Home</a></li>
               <li><a href="#about" className="hover:text-nancy-teal transition-colors">About Nancy</a></li>
               <li><a href="#services" className="hover:text-nancy-teal transition-colors">Services & Pricing</a></li>

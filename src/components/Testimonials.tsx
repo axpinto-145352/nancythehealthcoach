@@ -32,7 +32,7 @@ const Testimonials = () => {
           <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
             What Happens When You Invest in Your Brain
           </h2>
-          <p className="text-lg text-gray-400">
+          <p className="text-lg text-gray-300">
             Real people. Real workshops. Real results.
           </p>
         </div>
@@ -44,8 +44,8 @@ const Testimonials = () => {
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-5 sm:p-8 border border-white/10 hover:border-nancy-gold/30 transition-all duration-300 hover:-translate-y-1"
             >
               <Quote className="h-8 w-8 text-nancy-gold/60 mb-4" />
-              <p className="text-xs text-nancy-gold mb-3 font-medium">{t.context}</p>
-              <p className="text-gray-300 leading-relaxed mb-6 text-sm italic">
+              <p className="text-sm text-nancy-gold mb-3 font-medium">{t.context}</p>
+              <p className="text-gray-200 leading-relaxed mb-6 text-[0.9375rem] sm:text-base italic">
                 "{t.text}"
               </p>
               <div className="flex items-center space-x-3 border-t border-white/10 pt-4">
@@ -53,8 +53,8 @@ const Testimonials = () => {
                   <span className="text-white text-sm font-bold">{t.initials}</span>
                 </div>
                 <div>
-                  <p className="text-white font-semibold text-sm">{t.name}</p>
-                  <p className="text-gray-400 text-xs">{t.title}</p>
+                  <p className="text-white font-semibold text-sm sm:text-base">{t.name}</p>
+                  <p className="text-gray-300 text-xs sm:text-sm">{t.title}</p>
                 </div>
               </div>
             </div>

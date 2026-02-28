@@ -9,7 +9,7 @@ const Hero = () => {
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230D7377' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
       }} />
 
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="w-full max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left: Content */}
           <div className="text-center lg:text-left">
@@ -18,17 +18,17 @@ const Hero = () => {
               Brain Health Coach — San Diego & Virtual
             </div>
 
-            <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-nancy-charcoal mb-6 leading-tight">
+            <h1 className="font-display text-[1.75rem] sm:text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-nancy-charcoal mb-6 leading-tight">
               Hi, I'm Nancy.{' '}
               <span className="gradient-text">I help caregivers boost focus and protect brain health—without relying on sugar.</span>
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl text-nancy-charcoal leading-relaxed mb-4">
+            <p className="text-[1.0625rem] sm:text-lg md:text-xl text-nancy-charcoal leading-relaxed mb-4">
               Whether you're struggling with brain fog, sugar cravings, or worried about
               cognitive decline — I've been where you are. As the mom of a high-functioning autistic adult, a daughter, and a brain health coach, I've seen firsthand how the right support — from nutrition and lifestyle shifts to mindset and daily habits — can transform focus, energy, and overall well-being. I don't just teach this work. I've lived it.
             </p>
 
-            <p className="text-base sm:text-lg text-nancy-charcoal leading-relaxed mb-6 sm:mb-8">
+            <p className="text-[1.0625rem] sm:text-lg text-nancy-charcoal leading-relaxed mb-6 sm:mb-8">
               I'm Elite Brain Health Coach Certified through Amen University helping you take control of your brain health.
             </p>
 

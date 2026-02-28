@@ -46,7 +46,7 @@ const BlogPreview = ({ onNavigate }: BlogPreviewProps) => {
                   {post.title}
                 </h3>
 
-                <p className="text-sm text-nancy-gray leading-relaxed mb-4">
+                <p className="text-sm sm:text-base text-nancy-gray leading-relaxed mb-4">
                   {post.excerpt}
                 </p>
 

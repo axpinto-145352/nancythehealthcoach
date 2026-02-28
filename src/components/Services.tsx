@@ -115,7 +115,7 @@ const Services = () => {
 
                 <ul className="space-y-3 mb-6">
                   {tier.features.map((feature, j) => (
-                    <li key={j} className="flex items-start text-sm">
+                    <li key={j} className="flex items-start text-sm sm:text-base">
                       <Check className="h-5 w-5 text-nancy-teal mr-2 flex-shrink-0 mt-0.5" />
                       <span className="text-nancy-charcoal">{feature}</span>
                     </li>
@@ -123,7 +123,7 @@ const Services = () => {
                 </ul>
 
                 <div className="bg-nancy-sage/50 rounded-xl p-4 mb-6">
-                  <p className="text-xs text-nancy-gray">
+                  <p className="text-sm text-nancy-gray">
                     <strong className="text-nancy-charcoal">Who it's for:</strong> {tier.forWho}
                   </p>
                 </div>

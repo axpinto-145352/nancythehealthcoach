@@ -15,7 +15,7 @@ const SocialProofBar = () => {
           {items.map((item, i) => (
             <div key={i} className="flex items-center space-x-1.5 sm:space-x-2 text-white">
               <item.icon className="h-4 w-4 sm:h-5 sm:w-5 text-nancy-gold flex-shrink-0" />
-              <span className="text-xs sm:text-sm font-medium">{item.text}</span>
+              <span className="text-sm font-medium">{item.text}</span>
             </div>
           ))}
         </div>
