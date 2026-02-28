@@ -23,11 +23,11 @@ const AboutPreview = () => {
               </div>
             </div>
 
-            <div className="bg-nancy-sage rounded-3xl aspect-[3/4] sm:aspect-[4/3] relative overflow-hidden">
+            <div className="bg-nancy-sage rounded-3xl aspect-[3/4] lg:aspect-[4/3] relative overflow-hidden">
               <img
                 src={`${import.meta.env.BASE_URL}nancy-daughter.png`}
                 alt="Nancy's daughter"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
                 loading="lazy"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-nancy-charcoal to-nancy-charcoal/90 p-4 sm:p-5 md:p-6 text-center">
