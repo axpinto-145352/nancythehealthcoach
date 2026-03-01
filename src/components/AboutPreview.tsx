@@ -7,33 +7,36 @@ const AboutPreview = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Photos — shown second on mobile, first on desktop */}
           <div className="relative space-y-4 sm:space-y-6 order-2 lg:order-1">
-            {/* Mom photo — landscape on mobile, portrait on desktop */}
-            <div className="bg-nancy-sage rounded-3xl aspect-[4/3] sm:aspect-[4/5] relative overflow-hidden">
-              <img
-                src={`${import.meta.env.BASE_URL}nancy-mom-2.png`}
-                alt="Nancy Ryan with her mother"
-                className="w-full h-full object-cover object-top"
-                loading="lazy"
-              />
-              {/* Decorative quote overlay */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-nancy-teal to-nancy-teal/90 p-4 sm:p-6 md:p-8 text-center">
-                <p className="font-display text-white text-base sm:text-lg md:text-xl italic">
+            {/* Mom photo + caption */}
+            <div className="rounded-3xl overflow-hidden">
+              <div className="aspect-[4/3] sm:aspect-[4/5]">
+                <img
+                  src={`${import.meta.env.BASE_URL}nancy-mom-2.png`}
+                  alt="Nancy Ryan with her mother"
+                  className="w-full h-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+              <div className="bg-nancy-teal p-4 sm:p-6 text-center">
+                <p className="font-display text-white text-base sm:text-lg italic">
                   "I couldn't save my mom's brain. But I could help other people protect theirs."
                 </p>
                 <p className="text-nancy-gold text-sm mt-2">— Nancy Ryan</p>
               </div>
             </div>
 
-            {/* Daughter photo — landscape on mobile, landscape on desktop */}
-            <div className="bg-nancy-sage rounded-3xl aspect-[4/3] relative overflow-hidden">
-              <img
-                src={`${import.meta.env.BASE_URL}nancy-daughter.png`}
-                alt="Nancy's daughter"
-                className="w-full h-full object-cover object-top"
-                loading="lazy"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-nancy-charcoal to-nancy-charcoal/90 p-4 sm:p-5 md:p-6 text-center">
-                <p className="font-display text-white text-sm sm:text-base md:text-lg italic">
+            {/* Daughter photo + caption */}
+            <div className="rounded-3xl overflow-hidden">
+              <div className="aspect-[4/3]">
+                <img
+                  src={`${import.meta.env.BASE_URL}nancy-daughter.png`}
+                  alt="Nancy's daughter"
+                  className="w-full h-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+              <div className="bg-nancy-charcoal p-4 sm:p-5 text-center">
+                <p className="font-display text-white text-sm sm:text-base italic">
                   "She's the reason I do this work. My daughter taught me that every brain is different — and every brain deserves support."
                 </p>
                 <p className="text-nancy-gold text-sm mt-1 sm:mt-2">— Nancy Ryan</p>
